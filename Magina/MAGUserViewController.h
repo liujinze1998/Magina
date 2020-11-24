@@ -6,10 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MAGUserViewController : UIViewController
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, copy) NSString *ImaName;
+@property (nonatomic,assign) NSInteger num;
 
 @end
 

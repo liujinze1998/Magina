@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF08256D276F002A2B20 /* MyHeaderView.m */; };
+		2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */; };
+		2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF0B256D276F002A2B20 /* TableViewCell.m */; };
+		2B90EF15256D276F002A2B20 /* DataArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF0E256D276F002A2B20 /* DataArray.m */; };
+		2B90EF16256D276F002A2B20 /* RankData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF11256D276F002A2B20 /* RankData.m */; };
+		2B90EF24256D2778002A2B20 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1B256D2778002A2B20 /* People.m */; };
+		2B90EF25256D2778002A2B20 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1C256D2778002A2B20 /* EditViewController.m */; };
+		2B90EF26256D2778002A2B20 /* work.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90EF1D256D2778002A2B20 /* work.jpeg */; };
+		2B90EF27256D2778002A2B20 /* MyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1E256D2778002A2B20 /* MyHeader.m */; };
+		2B90EF28256D2778002A2B20 /* WechatIMG14.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90EF1F256D2778002A2B20 /* WechatIMG14.jpeg */; };
+		2B90EF29256D2778002A2B20 /* touxiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90EF22256D2778002A2B20 /* touxiang.jpeg */; };
 		2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65C7C2546F9110047AE86 /* AppDelegate.m */; };
 		2BB65C862546F9110047AE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C842546F9110047AE86 /* Main.storyboard */; };
 		2BB65C882546F9120047AE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C872546F9120047AE86 /* Assets.xcassets */; };
@@ -43,6 +54,25 @@
 
 /* Begin PBXFileReference section */
 		15C0FA8032A6B08DADE84528 /* Pods-Magina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.debug.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.debug.xcconfig"; sourceTree = "<group>"; };
+		2B90EF08256D276F002A2B20 /* MyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView.m; sourceTree = "<group>"; };
+		2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewContrllor.m; sourceTree = "<group>"; };
+		2B90EF0A256D276F002A2B20 /* DataArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataArray.h; sourceTree = "<group>"; };
+		2B90EF0B256D276F002A2B20 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		2B90EF0C256D276F002A2B20 /* RankData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankData.h; sourceTree = "<group>"; };
+		2B90EF0D256D276F002A2B20 /* MyTableViewContrllor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewContrllor.h; sourceTree = "<group>"; };
+		2B90EF0E256D276F002A2B20 /* DataArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataArray.m; sourceTree = "<group>"; };
+		2B90EF0F256D276F002A2B20 /* MyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHeaderView.h; sourceTree = "<group>"; };
+		2B90EF10256D276F002A2B20 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		2B90EF11256D276F002A2B20 /* RankData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankData.m; sourceTree = "<group>"; };
+		2B90EF1B256D2778002A2B20 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		2B90EF1C256D2778002A2B20 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		2B90EF1D256D2778002A2B20 /* work.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = work.jpeg; sourceTree = "<group>"; };
+		2B90EF1E256D2778002A2B20 /* MyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeader.m; sourceTree = "<group>"; };
+		2B90EF1F256D2778002A2B20 /* WechatIMG14.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG14.jpeg; sourceTree = "<group>"; };
+		2B90EF20256D2778002A2B20 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		2B90EF21256D2778002A2B20 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		2B90EF22256D2778002A2B20 /* touxiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touxiang.jpeg; sourceTree = "<group>"; };
+		2B90EF23256D2778002A2B20 /* MyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHeader.h; sourceTree = "<group>"; };
 		2BB65C782546F9110047AE86 /* Magina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB65C7B2546F9110047AE86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BB65C7C2546F9110047AE86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +135,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B90EF07256D276F002A2B20 /* MAGRank */ = {
+			isa = PBXGroup;
+			children = (
+				2B90EF08256D276F002A2B20 /* MyHeaderView.m */,
+				2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */,
+				2B90EF0A256D276F002A2B20 /* DataArray.h */,
+				2B90EF0B256D276F002A2B20 /* TableViewCell.m */,
+				2B90EF0C256D276F002A2B20 /* RankData.h */,
+				2B90EF0D256D276F002A2B20 /* MyTableViewContrllor.h */,
+				2B90EF0E256D276F002A2B20 /* DataArray.m */,
+				2B90EF0F256D276F002A2B20 /* MyHeaderView.h */,
+				2B90EF10256D276F002A2B20 /* TableViewCell.h */,
+				2B90EF11256D276F002A2B20 /* RankData.m */,
+			);
+			path = MAGRank;
+			sourceTree = "<group>";
+		};
+		2B90EF1A256D2778002A2B20 /* MAGUser */ = {
+			isa = PBXGroup;
+			children = (
+				2B90EF1B256D2778002A2B20 /* People.m */,
+				2B90EF1C256D2778002A2B20 /* EditViewController.m */,
+				2B90EF1D256D2778002A2B20 /* work.jpeg */,
+				2B90EF1E256D2778002A2B20 /* MyHeader.m */,
+				2B90EF1F256D2778002A2B20 /* WechatIMG14.jpeg */,
+				2B90EF20256D2778002A2B20 /* EditViewController.h */,
+				2B90EF21256D2778002A2B20 /* People.h */,
+				2B90EF22256D2778002A2B20 /* touxiang.jpeg */,
+				2B90EF23256D2778002A2B20 /* MyHeader.h */,
+			);
+			path = MAGUser;
+			sourceTree = "<group>";
+		};
 		2BB65C6F2546F9110047AE86 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +193,8 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
+				2B90EF1A256D2778002A2B20 /* MAGUser */,
+				2B90EF07256D276F002A2B20 /* MAGRank */,
 				2BB65C7B2546F9110047AE86 /* AppDelegate.h */,
 				2BB65C7C2546F9110047AE86 /* AppDelegate.m */,
 				2BB65C842546F9110047AE86 /* Main.storyboard */,
@@ -189,7 +254,6 @@
 				94BB617D50D5AA8606F9A9D7 /* Pods-MaginaUITests.debug.xcconfig */,
 				A7CFF99890D365DEB740EA90 /* Pods-MaginaUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -298,7 +362,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B90EF29256D2778002A2B20 /* touxiang.jpeg in Resources */,
+				2B90EF26256D2778002A2B20 /* work.jpeg in Resources */,
 				2BB65C8B2546F9120047AE86 /* LaunchScreen.storyboard in Resources */,
+				2B90EF28256D2778002A2B20 /* WechatIMG14.jpeg in Resources */,
 				2BB65C882546F9120047AE86 /* Assets.xcassets in Resources */,
 				2BB65C862546F9110047AE86 /* Main.storyboard in Resources */,
 			);
@@ -394,13 +461,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B90EF24256D2778002A2B20 /* People.m in Sources */,
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
+				2B90EF27256D2778002A2B20 /* MyHeader.m in Sources */,
+				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
+				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,
+				2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */,
+				2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */,
 				2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */,
 				2BB65FD6254705060047AE86 /* MAGFeedViewController.m in Sources */,
+				2B90EF25256D2778002A2B20 /* EditViewController.m in Sources */,
 				2BB65C8E2546F9120047AE86 /* main.m in Sources */,
 				2BB65FCA254703C20047AE86 /* MAGRootViewController.m in Sources */,
+				2B90EF16256D276F002A2B20 /* RankData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
