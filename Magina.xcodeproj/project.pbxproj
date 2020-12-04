@@ -13,11 +13,8 @@
 		2B90EF15256D276F002A2B20 /* DataArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF0E256D276F002A2B20 /* DataArray.m */; };
 		2B90EF16256D276F002A2B20 /* RankData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF11256D276F002A2B20 /* RankData.m */; };
 		2B90EF24256D2778002A2B20 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1B256D2778002A2B20 /* People.m */; };
-		2B90EF25256D2778002A2B20 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1C256D2778002A2B20 /* EditViewController.m */; };
-		2B90EF26256D2778002A2B20 /* work.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90EF1D256D2778002A2B20 /* work.jpeg */; };
-		2B90EF27256D2778002A2B20 /* MyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1E256D2778002A2B20 /* MyHeader.m */; };
-		2B90EF28256D2778002A2B20 /* WechatIMG14.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90EF1F256D2778002A2B20 /* WechatIMG14.jpeg */; };
-		2B90EF29256D2778002A2B20 /* touxiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90EF22256D2778002A2B20 /* touxiang.jpeg */; };
+		2B90EF25256D2778002A2B20 /* MAGEditUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1C256D2778002A2B20 /* MAGEditUserInfoViewController.m */; };
+		2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */; };
 		2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65C7C2546F9110047AE86 /* AppDelegate.m */; };
 		2BB65C862546F9110047AE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C842546F9110047AE86 /* Main.storyboard */; };
 		2BB65C882546F9120047AE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C872546F9120047AE86 /* Assets.xcassets */; };
@@ -65,14 +62,11 @@
 		2B90EF10256D276F002A2B20 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		2B90EF11256D276F002A2B20 /* RankData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankData.m; sourceTree = "<group>"; };
 		2B90EF1B256D2778002A2B20 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
-		2B90EF1C256D2778002A2B20 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
-		2B90EF1D256D2778002A2B20 /* work.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = work.jpeg; sourceTree = "<group>"; };
-		2B90EF1E256D2778002A2B20 /* MyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeader.m; sourceTree = "<group>"; };
-		2B90EF1F256D2778002A2B20 /* WechatIMG14.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG14.jpeg; sourceTree = "<group>"; };
-		2B90EF20256D2778002A2B20 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		2B90EF1C256D2778002A2B20 /* MAGEditUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGEditUserInfoViewController.m; sourceTree = "<group>"; };
+		2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGUserInfoHeaderViewController.m; sourceTree = "<group>"; };
+		2B90EF20256D2778002A2B20 /* MAGEditUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGEditUserInfoViewController.h; sourceTree = "<group>"; };
 		2B90EF21256D2778002A2B20 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
-		2B90EF22256D2778002A2B20 /* touxiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touxiang.jpeg; sourceTree = "<group>"; };
-		2B90EF23256D2778002A2B20 /* MyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHeader.h; sourceTree = "<group>"; };
+		2B90EF23256D2778002A2B20 /* MAGUserInfoHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGUserInfoHeaderViewController.h; sourceTree = "<group>"; };
 		2BB65C782546F9110047AE86 /* Magina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB65C7B2546F9110047AE86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BB65C7C2546F9110047AE86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,17 +129,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B53FEB02577CA2C00C520F6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B90EF23256D2778002A2B20 /* MAGUserInfoHeaderViewController.h */,
+				2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */,
+				2BB65FDD254705290047AE86 /* MAGUserViewController.h */,
+				2BB65FDE254705290047AE86 /* MAGUserViewController.m */,
+				2B90EF20256D2778002A2B20 /* MAGEditUserInfoViewController.h */,
+				2B90EF1C256D2778002A2B20 /* MAGEditUserInfoViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2B53FEB12577CA3B00C520F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B53FEB22577CA7E00C520F6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2B90EF21256D2778002A2B20 /* People.h */,
+				2B90EF1B256D2778002A2B20 /* People.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		2B90EF07256D276F002A2B20 /* MAGRank */ = {
 			isa = PBXGroup;
 			children = (
-				2B90EF08256D276F002A2B20 /* MyHeaderView.m */,
+				2B90EF0D256D276F002A2B20 /* MyTableViewContrllor.h */,
 				2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */,
 				2B90EF0A256D276F002A2B20 /* DataArray.h */,
 				2B90EF0B256D276F002A2B20 /* TableViewCell.m */,
 				2B90EF0C256D276F002A2B20 /* RankData.h */,
-				2B90EF0D256D276F002A2B20 /* MyTableViewContrllor.h */,
 				2B90EF0E256D276F002A2B20 /* DataArray.m */,
 				2B90EF0F256D276F002A2B20 /* MyHeaderView.h */,
+				2B90EF08256D276F002A2B20 /* MyHeaderView.m */,
 				2B90EF10256D276F002A2B20 /* TableViewCell.h */,
 				2B90EF11256D276F002A2B20 /* RankData.m */,
 			);
@@ -155,15 +178,9 @@
 		2B90EF1A256D2778002A2B20 /* MAGUser */ = {
 			isa = PBXGroup;
 			children = (
-				2B90EF1B256D2778002A2B20 /* People.m */,
-				2B90EF1C256D2778002A2B20 /* EditViewController.m */,
-				2B90EF1D256D2778002A2B20 /* work.jpeg */,
-				2B90EF1E256D2778002A2B20 /* MyHeader.m */,
-				2B90EF1F256D2778002A2B20 /* WechatIMG14.jpeg */,
-				2B90EF20256D2778002A2B20 /* EditViewController.h */,
-				2B90EF21256D2778002A2B20 /* People.h */,
-				2B90EF22256D2778002A2B20 /* touxiang.jpeg */,
-				2B90EF23256D2778002A2B20 /* MyHeader.h */,
+				2B53FEB22577CA7E00C520F6 /* DataSource */,
+				2B53FEB12577CA3B00C520F6 /* View */,
+				2B53FEB02577CA2C00C520F6 /* ViewController */,
 			);
 			path = MAGUser;
 			sourceTree = "<group>";
@@ -206,8 +223,6 @@
 				2BB65FC9254703C20047AE86 /* MAGRootViewController.m */,
 				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
 				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
-				2BB65FDD254705290047AE86 /* MAGUserViewController.h */,
-				2BB65FDE254705290047AE86 /* MAGUserViewController.m */,
 				2BB65FE3254705800047AE86 /* MAGRankViewController.h */,
 				2BB65FE4254705800047AE86 /* MAGRankViewController.m */,
 				2BB65FE92547058B0047AE86 /* MAGTestViewController.h */,
@@ -268,6 +283,7 @@
 				2BB65C742546F9110047AE86 /* Sources */,
 				2BB65C752546F9110047AE86 /* Frameworks */,
 				2BB65C762546F9110047AE86 /* Resources */,
+				4F4F3BFD0FC47CA5EE4A3555 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,10 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B90EF29256D2778002A2B20 /* touxiang.jpeg in Resources */,
-				2B90EF26256D2778002A2B20 /* work.jpeg in Resources */,
 				2BB65C8B2546F9120047AE86 /* LaunchScreen.storyboard in Resources */,
-				2B90EF28256D2778002A2B20 /* WechatIMG14.jpeg in Resources */,
 				2BB65C882546F9120047AE86 /* Assets.xcassets in Resources */,
 				2BB65C862546F9110047AE86 /* Main.storyboard in Resources */,
 			);
@@ -408,6 +421,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F4F3BFD0FC47CA5EE4A3555 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magina/Pods-Magina-resources.sh",
+				"${PODS_ROOT}/XLForm/XLForm/XLForm.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XLForm.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magina/Pods-Magina-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5429EC0047DECE3DBBA41D2E /* [CP] Check Pods Manifest.lock */ = {
@@ -465,14 +500,14 @@
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
-				2B90EF27256D2778002A2B20 /* MyHeader.m in Sources */,
+				2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */,
 				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
 				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,
 				2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */,
 				2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */,
 				2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */,
 				2BB65FD6254705060047AE86 /* MAGFeedViewController.m in Sources */,
-				2B90EF25256D2778002A2B20 /* EditViewController.m in Sources */,
+				2B90EF25256D2778002A2B20 /* MAGEditUserInfoViewController.m in Sources */,
 				2BB65C8E2546F9120047AE86 /* main.m in Sources */,
 				2BB65FCA254703C20047AE86 /* MAGRootViewController.m in Sources */,
 				2B90EF16256D276F002A2B20 /* RankData.m in Sources */,

@@ -26,7 +26,6 @@
     
     NSArray *VCArray = [NSArray arrayWithObjects:feedVC, rankVC, testVC, userVC, nil];
     self.viewControllers = VCArray;
-    //backgroundcolor title
     [self configTabBarItem:feedVC.tabBarItem
                      title:@"首页"
                  titleSize:15.0
@@ -62,12 +61,6 @@
              selectedImage:nil
           normalTitleColor:[UIColor grayColor]
         selectedTitleColor:[UIColor redColor]];
-    
-        
-//    UINavigationController *homeNV = [[UINavigationController alloc] initWithRootViewController:homeVC];
-//    UINavigationController *blogNV = [[UINavigationController alloc] initWithRootViewController:blogVC];
-//        // 把子控制器添加到UITabBarController
-//    self.viewControllers = @[homeNV, blogNV];
 }
 
 
