@@ -13,6 +13,12 @@
 
 @property(nonatomic, strong) UIView *parentView;//牵扯太多，懂得都懂
 @property (nonatomic, strong) UIImageView *userBackgroundImageView;//顶部背景图片
+@property (nonatomic, strong) UIButton *userHeadButton;//头像
+@property (nonatomic, strong) UIButton *addNewFriendButton;//加好友
+@property (nonatomic, strong) UIButton *editUserInfoButton;//编辑资料
+//@property (nonatomic, strong) UIImageView *userBackgroundImageView;//顶部背景图片
+//@property (nonatomic, strong) UIImageView *userBackgroundImageView;//顶部背景图片
+//@property (nonatomic, strong) UIImageView *userBackgroundImageView;//顶部背景图片
 
 @end
 
@@ -43,9 +49,34 @@
 
 - (void)setUI
 {
-    [self backgroundLoad];
-    [self headPortraitLoad];
-    [self friendBut];
+    [self.view addSubview:self.userBackgroundImageView];
+    [self.view addSubview:self.userHeadButton];
+    [self.view addSubview:self.editUserInfoButton];
+    [self.view addSubview:self.addNewFriendButton];
+    
+    [self.userBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 0.3));
+    }];
+    
+    [self.userHeadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).with.offset(20);
+        make.top.equalTo(self.userBackgroundImageView.mas_bottom).with.offset(-20);
+        make.size.mas_equalTo(CGSizeMake(90, 90));
+    }];
+   
+    [self.addNewFriendButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view.mas_right).with.offset(-20);
+        make.bottom.equalTo(self.userHeadButton.mas_bottom);
+        make.size.mas_equalTo(CGSizeMake(70, 40));
+    }];
+    
+    [self.editUserInfoButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.addNewFriendButton.mas_left).with.offset(-5);
+        make.bottom.equalTo(self.userHeadButton.mas_bottom);
+        make.size.mas_equalTo(CGSizeMake(140, 40));
+    }];
+    
     [self nameLabel];
     [self dNumLabel];
     [self jianjie];
@@ -57,43 +88,6 @@
     [self fans];
 }
 
-- (void)backgroundLoad
-{
-    self.userBackgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WechatIMG14.jpeg"]];
-    [self.userBackgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
-    [self.userBackgroundImageView setClipsToBounds:YES];
-    [self.userBackgroundImageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
-    [self.view addSubview:self.userBackgroundImageView];
-    [self.userBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(375, 125));
-    }];
-}
-
-- (void)headPortraitLoad
-{
-    UIImageView *ima =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"touxiang.jpeg"]];
-    [self.view addSubview:ima];
-    [ima mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left).with.offset(16);
-        make.top.equalTo(self.view.mas_top).with.offset(113);
-        make.size.mas_equalTo(CGSizeMake(94, 94));
-    }];
-}
-
-
-
-- (void)friendBut{
-    UIButton* but = [[UIButton alloc]init];
-    [self.view addSubview:but];
-    [but mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left).with.offset(290);
-        make.top.equalTo(self.view.mas_top).with.offset(140);
-        make.size.mas_equalTo(CGSizeMake(69, 40));
-    }];
-    [but setTitle:@"+好友" forState:UIControlStateNormal];
-    but.backgroundColor = [UIColor grayColor];
-}
 
 - (void)nameLabel{
     _nameLab = [[UILabel alloc]init];
@@ -218,21 +212,82 @@
 
 - (void)homePageDidScroll:(CGFloat)dropValue
 {
-//    //图片高度
-//    CGFloat imageHeight = self.dd_h;
-//    //图片宽度
-//    CGFloat imageWidth = kScreenWidth;
-//    //图片上下偏移量
-//    CGFloat imageOffsetY = contentOffSetY;
-//
-//    //下拉
-//    if (imageOffsetY < 0) {
-//        CGFloat totalOffset = imageHeight + ABS(imageOffsetY);
-//        CGFloat f = totalOffset / imageHeight;
-//        self.backgroundImgV.frame = CGRectMake(-(imageWidth * f - imageWidth) * 0.5, imageOffsetY, imageWidth * f, totalOffset);
-//    }
+    //图片高度
+    CGFloat imageHeight = self.userBackgroundImageView.bounds.size.height;
+    //图片宽度
+    CGFloat imageWidth = self.userBackgroundImageView.bounds.size.width;
+
+    //下拉
+    if (dropValue < 0) {
+        CGFloat totalHeight = imageHeight + ABS(dropValue);
+        CGFloat multiple = totalHeight / imageHeight;
+        CGFloat totalWidth = imageWidth * multiple;
+        self.userBackgroundImageView.frame = CGRectMake(-(totalWidth - imageWidth) * 0.5, dropValue, totalWidth, totalHeight);
+    }
 //
 //    _visualEffectView.frame = self.backgroundImgV.frame;
+}
+
+#pragma mark - action
+- (void)addNewFriendButtonClicked
+{
+    //加好友 未开发
+}
+
+- (void)userHeadButtonClicked
+{
+    //换头像-imagepicker
+}
+
+- (void)editUserInfoButtonClicked
+{
+    MAGEditUserInfoViewController *editInfoViewController = [[MAGEditUserInfoViewController alloc] init];
+    [self presentViewController:editInfoViewController animated:YES completion:nil];
+}
+
+#pragma mark - init UI
+
+- (UIImageView *)userBackgroundImageView
+{
+    if (!_userBackgroundImageView) {
+        _userBackgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WechatIMG14.jpeg"]];
+        [_userBackgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
+        [_userBackgroundImageView setClipsToBounds:YES];
+        [_userBackgroundImageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    }
+    return _userBackgroundImageView;
+}
+
+- (UIButton *)userHeadButton
+{
+    if (!_userHeadButton) {
+        _userHeadButton = [[UIButton alloc] init];
+        [_userHeadButton setImage:[UIImage imageNamed:@"touxiang.jpeg"] forState:UIControlStateNormal];
+        [_userHeadButton addTarget:self action:@selector(userHeadButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _userHeadButton;
+}
+
+- (UIButton *)addNewFriendButton
+{
+    if (!_addNewFriendButton) {
+        _addNewFriendButton = [[UIButton alloc] init];
+        _addNewFriendButton.backgroundColor = [UIColor grayColor];
+        [_addNewFriendButton setTitle:@"+好友" forState:UIControlStateNormal];
+        [_addNewFriendButton addTarget:self action:@selector(addNewFriendButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addNewFriendButton;
+}
+
+- (UIButton *)editUserInfoButton
+{
+    if (!_editUserInfoButton) {
+        _editUserInfoButton = [[UIButton alloc] init];
+        [_editUserInfoButton setTitle:@"编辑资料" forState:UIControlStateNormal];
+        _editUserInfoButton.backgroundColor = [UIColor grayColor];
+        [_editUserInfoButton addTarget:self action:@selector(editUserInfoButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _editUserInfoButton;
 }
 
 @end

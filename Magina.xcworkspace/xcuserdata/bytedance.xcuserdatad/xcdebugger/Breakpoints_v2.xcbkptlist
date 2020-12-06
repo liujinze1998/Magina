@@ -19,22 +19,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "87B46D4C-CBF2-492A-A0F8-8DB087367E92"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Magina/MAGUser/ViewController/MAGUserViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "-collectionView:layout:referenceSizeForHeaderInSection:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1C9EBA1F-56CE-4BFD-A9F3-366B2BFBF647"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -51,15 +35,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5DC90D69-0F56-458C-A956-172D368EAC0C"
-            shouldBeEnabled = "Yes"
+            uuid = "51B580FB-18A6-449E-8266-3C523539F91C"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Magina/MAGUser/ViewController/MAGUserInfoHeaderViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "-homePageDidScroll:"
             landmarkType = "7">
          </BreakpointContent>

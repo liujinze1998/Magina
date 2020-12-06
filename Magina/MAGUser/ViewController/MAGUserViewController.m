@@ -17,7 +17,6 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) MAGUserInfoHeaderViewController *headerViewController;//视觉上的header
-@property (nonatomic, strong) UIButton *editUserInfoButton;//编辑资料
 @property (nonatomic, strong) UIButton *addFriendsButton;//加好友
 
 @property (nonatomic, strong) UIButton *productsTabButton;//作品tab
@@ -48,7 +47,22 @@
     self.num = [People SharedInstance].works;
 }
 
+#pragma mark - set UI
+
 - (void)setUpUI
+{
+    [self setUpNavBar];
+    [self setUpCollectionView];
+}
+
+- (void)setUpNavBar
+{
+    // 设置一个空的图片背景图片，就能实现导航栏透明但是 BarButtonItem 正常显示
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void)setUpCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(124, 168);
@@ -107,13 +121,6 @@
             _headerViewController = [[MAGUserInfoHeaderViewController alloc] initWithParentView:userInfoView];
         }
         [userInfoView addSubview:_headerViewController.view];
-        [userInfoView addSubview:self.editUserInfoButton];
-
-        [self.editUserInfoButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(userInfoView.mas_left).with.offset(130);
-            make.top.equalTo(userInfoView.mas_top).with.offset(140);
-            make.size.mas_equalTo(CGSizeMake(156, 40));
-        }];
         return userInfoView;
     } else if (indexPath.section == 1 && [kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *switchSourceTabHeaderView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
@@ -175,12 +182,6 @@
 
 #pragma mark - acitons
 
-- (void)editUserInfoButtonClicked
-{
-    MAGEditUserInfoViewController *editInfoViewController = [[MAGEditUserInfoViewController alloc] init];
-    [self presentViewController:editInfoViewController animated:YES completion:nil];
-}
-
 - (void)productsTabButtonClicked
 {
     self.ImaName = @"work";
@@ -201,17 +202,6 @@
 }
 
 #pragma mark - UI load
-
-- (UIButton *)editUserInfoButton
-{
-    if (!_editUserInfoButton) {
-        _editUserInfoButton = [[UIButton alloc] init];
-        [_editUserInfoButton setTitle:@"编辑资料" forState:UIControlStateNormal];
-        _editUserInfoButton.backgroundColor = [UIColor grayColor];
-        [_editUserInfoButton addTarget:self action:@selector(editUserInfoButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _editUserInfoButton;
-}
 
 - (UIButton *)productsTabButton;
 {
