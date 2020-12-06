@@ -22,9 +22,10 @@
     MAGFeedViewController *feedVC = [[MAGFeedViewController alloc] init];
     MAGRankViewController *rankVC = [[MAGRankViewController alloc] init];
     MAGTestViewController *testVC = [[MAGTestViewController alloc] init];
-    MAGUserViewController *userVC = [[MAGUserViewController alloc] init];
     
-    NSArray *VCArray = [NSArray arrayWithObjects:feedVC, rankVC, testVC, userVC, nil];
+    MAGUserViewController *userVC = [[MAGUserViewController alloc] init];
+    UINavigationController *userNavVC = [[UINavigationController alloc] initWithRootViewController:userVC];
+    NSArray *VCArray = [NSArray arrayWithObjects:feedVC, rankVC, testVC, userNavVC, nil];
     self.viewControllers = VCArray;
     [self configTabBarItem:feedVC.tabBarItem
                      title:@"首页"
@@ -53,7 +54,7 @@
           normalTitleColor:[UIColor grayColor]
         selectedTitleColor:[UIColor redColor]];
     
-    [self configTabBarItem:userVC.tabBarItem
+    [self configTabBarItem:userNavVC.tabBarItem
                      title:@"个人"
                  titleSize:15.0
              titleFontName:@"HeiTi SC"

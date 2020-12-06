@@ -57,9 +57,17 @@
 
 - (void)setUpNavBar
 {
+    if (@available(iOS 11.0, *)) {
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     // 设置一个空的图片背景图片，就能实现导航栏透明但是 BarButtonItem 正常显示
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
+    // 设置一个空的 shadowImage 来实现
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
 }
 
 - (void)setUpCollectionView

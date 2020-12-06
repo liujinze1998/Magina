@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */; };
 		2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF08256D276F002A2B20 /* MyHeaderView.m */; };
 		2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */; };
 		2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF0B256D276F002A2B20 /* TableViewCell.m */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		15C0FA8032A6B08DADE84528 /* Pods-Magina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.debug.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.debug.xcconfig"; sourceTree = "<group>"; };
+		2B8B5816257C8A610015F29B /* UIDevice+MAGAdapt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MAGAdapt.h"; sourceTree = "<group>"; };
+		2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MAGAdapt.m"; sourceTree = "<group>"; };
 		2B90EF08256D276F002A2B20 /* MyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView.m; sourceTree = "<group>"; };
 		2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewContrllor.m; sourceTree = "<group>"; };
 		2B90EF0A256D276F002A2B20 /* DataArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataArray.h; sourceTree = "<group>"; };
@@ -158,6 +161,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		2B8B581C257C8CCF0015F29B /* MAGUIConfigTool */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B5816257C8A610015F29B /* UIDevice+MAGAdapt.h */,
+				2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */,
+			);
+			path = MAGUIConfigTool;
+			sourceTree = "<group>";
+		};
 		2B90EF07256D276F002A2B20 /* MAGRank */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +222,7 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
+				2B8B581C257C8CCF0015F29B /* MAGUIConfigTool */,
 				2B90EF1A256D2778002A2B20 /* MAGUser */,
 				2B90EF07256D276F002A2B20 /* MAGRank */,
 				2BB65C7B2546F9110047AE86 /* AppDelegate.h */,
@@ -502,6 +515,7 @@
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
 				2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */,
 				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
+				2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */,
 				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,
 				2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */,
 				2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */,

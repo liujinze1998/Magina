@@ -9,6 +9,8 @@
 #import "People.h"
 #import <Masonry/Masonry.h>
 #import "MAGEditUserInfoViewController.h"
+#import "UIDevice+MAGAdapt.h"
+
 @interface MAGUserInfoHeaderViewController ()
 
 @property(nonatomic, strong) UIView *parentView;//牵扯太多，懂得都懂
@@ -53,9 +55,8 @@
     [self.view addSubview:self.userHeadButton];
     [self.view addSubview:self.editUserInfoButton];
     [self.view addSubview:self.addNewFriendButton];
-    
     [self.userBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view);
+        make.top.equalTo(self.view).offset(-70);
         make.size.mas_equalTo(CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 0.3));
     }];
     
