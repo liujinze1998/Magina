@@ -13,7 +13,9 @@
 
 @interface MAGUserInfoHeaderViewController ()
 
-@property(nonatomic, strong) UIView *parentView;//牵扯太多，懂得都懂
+@property (nonatomic, strong) UIView *parentView;//牵扯太多，懂得都懂
+@property (nonatomic, assign) CGFloat topOffset;
+
 @property (nonatomic, strong) UIImageView *userBackgroundImageView;//顶部背景图片
 @property (nonatomic, strong) UIButton *userHeadButton;//头像
 @property (nonatomic, strong) UIButton *addNewFriendButton;//加好友
@@ -26,11 +28,12 @@
 
 @implementation MAGUserInfoHeaderViewController
 
-- (instancetype)initWithParentView:(UIView *)view
+- (instancetype)initWithParentView:(UIView *)view navHeight:(CGFloat)height
 {
     self = [super init];
     if (self) {
         self.parentView = view;
+        self.topOffset = height + [UIDevice safeAreaTopInset];
     }
     return self;
 }
@@ -38,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
-    [self.view setFrame:self.parentView.frame];
+    [self.view setFrame:CGRectMake(self.parentView.frame.origin.x, self.parentView.frame.origin.y - self.topOffset, self.parentView.frame.size.width, self.parentView.frame.size.height + self.topOffset)];
     [self setUI];
 }
 
@@ -55,9 +58,10 @@
     [self.view addSubview:self.userHeadButton];
     [self.view addSubview:self.editUserInfoButton];
     [self.view addSubview:self.addNewFriendButton];
+    
     [self.userBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(-70);
-        make.size.mas_equalTo(CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 0.3));
+        make.top.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 0.4));
     }];
     
     [self.userHeadButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -225,8 +229,6 @@
         CGFloat totalWidth = imageWidth * multiple;
         self.userBackgroundImageView.frame = CGRectMake(-(totalWidth - imageWidth) * 0.5, dropValue, totalWidth, totalHeight);
     }
-//
-//    _visualEffectView.frame = self.backgroundImgV.frame;
 }
 
 #pragma mark - action

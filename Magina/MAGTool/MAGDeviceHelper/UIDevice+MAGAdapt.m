@@ -63,4 +63,14 @@ static NSInteger isNotchedScreen = -1;
     }
 }
 
++ (BOOL)isLandDirect
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].windows.firstObject.windowScene.interfaceOrientation;
+    if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) UILabel *nameLab;
 @property (nonatomic) UILabel *dNumLab;
 
-- (instancetype)initWithParentView:(UIView *)view;
+- (instancetype)initWithParentView:(UIView *)view navHeight:(CGFloat)height;
 - (void)homePageDidScroll:(CGFloat)dropValue;
 
 @end

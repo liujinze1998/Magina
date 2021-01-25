@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (CGFloat)safeAreaTopInset;//全面屏的顶部
 
++ (BOOL)isLandDirect;//是否是横持手机
+
 @end
 
 NS_ASSUME_NONNULL_END

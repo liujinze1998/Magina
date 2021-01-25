@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */; };
 		2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */; };
+		2B8B582A257CA0750015F29B /* MAGUIConfigCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */; };
 		2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF08256D276F002A2B20 /* MyHeaderView.m */; };
 		2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */; };
 		2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF0B256D276F002A2B20 /* TableViewCell.m */; };
@@ -52,8 +54,12 @@
 
 /* Begin PBXFileReference section */
 		15C0FA8032A6B08DADE84528 /* Pods-Magina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.debug.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.debug.xcconfig"; sourceTree = "<group>"; };
+		2B3A2E4425BEA1FF00F568E7 /* MAGLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGLaunchView.h; sourceTree = "<group>"; };
+		2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGLaunchView.m; sourceTree = "<group>"; };
 		2B8B5816257C8A610015F29B /* UIDevice+MAGAdapt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MAGAdapt.h"; sourceTree = "<group>"; };
 		2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MAGAdapt.m"; sourceTree = "<group>"; };
+		2B8B5828257CA0750015F29B /* MAGUIConfigCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGUIConfigCenter.h; sourceTree = "<group>"; };
+		2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGUIConfigCenter.m; sourceTree = "<group>"; };
 		2B90EF08256D276F002A2B20 /* MyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView.m; sourceTree = "<group>"; };
 		2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewContrllor.m; sourceTree = "<group>"; };
 		2B90EF0A256D276F002A2B20 /* DataArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataArray.h; sourceTree = "<group>"; };
@@ -132,6 +138,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				2B3A2E4425BEA1FF00F568E7 /* MAGLaunchView.h */,
+				2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */,
+			);
+			path = MAGLaunch;
+			sourceTree = "<group>";
+		};
+		2B3A2E5825BEBEAC00F568E7 /* MAGUIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B5828257CA0750015F29B /* MAGUIConfigCenter.h */,
+				2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */,
+			);
+			path = MAGUIHelper;
+			sourceTree = "<group>";
+		};
+		2B3A2E5925BEBEC300F568E7 /* MAGTool */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B581C257C8CCF0015F29B /* MAGDeviceHelper */,
+				2B3A2E5825BEBEAC00F568E7 /* MAGUIHelper */,
+			);
+			path = MAGTool;
+			sourceTree = "<group>";
+		};
 		2B53FEB02577CA2C00C520F6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,13 +194,13 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
-		2B8B581C257C8CCF0015F29B /* MAGUIConfigTool */ = {
+		2B8B581C257C8CCF0015F29B /* MAGDeviceHelper */ = {
 			isa = PBXGroup;
 			children = (
 				2B8B5816257C8A610015F29B /* UIDevice+MAGAdapt.h */,
 				2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */,
 			);
-			path = MAGUIConfigTool;
+			path = MAGDeviceHelper;
 			sourceTree = "<group>";
 		};
 		2B90EF07256D276F002A2B20 /* MAGRank */ = {
@@ -222,7 +255,8 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
-				2B8B581C257C8CCF0015F29B /* MAGUIConfigTool */,
+				2B3A2E5925BEBEC300F568E7 /* MAGTool */,
+				2B3A2E4325BEA19100F568E7 /* MAGLaunch */,
 				2B90EF1A256D2778002A2B20 /* MAGUser */,
 				2B90EF07256D276F002A2B20 /* MAGRank */,
 				2BB65C7B2546F9110047AE86 /* AppDelegate.h */,
@@ -509,10 +543,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8B582A257CA0750015F29B /* MAGUIConfigCenter.m in Sources */,
 				2B90EF24256D2778002A2B20 /* People.m in Sources */,
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
+				2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */,
 				2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */,
 				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
 				2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */,
@@ -700,13 +736,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
 				INFOPLIST_FILE = Magina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liujinze.Magina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -719,13 +756,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
 				INFOPLIST_FILE = Magina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liujinze.Magina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

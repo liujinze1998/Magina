@@ -22,7 +22,6 @@
     MAGRootViewController *rootVC = [[MAGRootViewController alloc] init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

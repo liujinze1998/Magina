@@ -10,19 +10,22 @@
 #import "MAGRankViewController.h"
 #import "MAGTestViewController.h"
 #import "MAGUserViewController.h"
+#import "MAGLaunchView.h"
 
 @interface MAGRootViewController ()
+
+@property (nonatomic, strong) MAGLaunchView *launchView;
 
 @end
 
 @implementation MAGRootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     MAGFeedViewController *feedVC = [[MAGFeedViewController alloc] init];
     MAGRankViewController *rankVC = [[MAGRankViewController alloc] init];
     MAGTestViewController *testVC = [[MAGTestViewController alloc] init];
-    
     MAGUserViewController *userVC = [[MAGUserViewController alloc] init];
     UINavigationController *userNavVC = [[UINavigationController alloc] initWithRootViewController:userVC];
     NSArray *VCArray = [NSArray arrayWithObjects:feedVC, rankVC, testVC, userNavVC, nil];
@@ -64,6 +67,13 @@
         selectedTitleColor:[UIColor redColor]];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.launchView = [[MAGLaunchView alloc] initLaunchView];
+    [self.view addSubview:self.launchView];
+    [self.view bringSubviewToFront:self.launchView];
+    [self.launchView startAnimation];
+}
 
 - (void)configTabBarItem:(UITabBarItem *)tabbarItem
                    title:(NSString *)title
