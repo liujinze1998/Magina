@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1D8A2525CC2330005CDF83 /* MAGScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A2425CC2330005CDF83 /* MAGScanViewController.m */; };
+		2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A2C25CC243E005CDF83 /* MAGScanView.m */; };
+		2B1D8A4325CC2482005CDF83 /* MAGCameraScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */; };
 		2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */; };
 		2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */; };
 		2B8B582A257CA0750015F29B /* MAGUIConfigCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */; };
@@ -54,6 +57,12 @@
 
 /* Begin PBXFileReference section */
 		15C0FA8032A6B08DADE84528 /* Pods-Magina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.debug.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.debug.xcconfig"; sourceTree = "<group>"; };
+		2B1D8A2325CC2330005CDF83 /* MAGScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGScanViewController.h; sourceTree = "<group>"; };
+		2B1D8A2425CC2330005CDF83 /* MAGScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGScanViewController.m; sourceTree = "<group>"; };
+		2B1D8A2B25CC243E005CDF83 /* MAGScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGScanView.h; sourceTree = "<group>"; };
+		2B1D8A2C25CC243E005CDF83 /* MAGScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGScanView.m; sourceTree = "<group>"; };
+		2B1D8A4125CC2482005CDF83 /* MAGCameraScanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGCameraScanManager.h; sourceTree = "<group>"; };
+		2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGCameraScanManager.m; sourceTree = "<group>"; };
 		2B3A2E4425BEA1FF00F568E7 /* MAGLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGLaunchView.h; sourceTree = "<group>"; };
 		2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGLaunchView.m; sourceTree = "<group>"; };
 		2B8B5816257C8A610015F29B /* UIDevice+MAGAdapt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MAGAdapt.h"; sourceTree = "<group>"; };
@@ -138,6 +147,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1D52AB25C2B64B005CDF83 /* MAGFeed */ = {
+			isa = PBXGroup;
+			children = (
+				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
+				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
+			);
+			path = MAGFeed;
+			sourceTree = "<group>";
+		};
+		2B1D52AC25C2B654005CDF83 /* MAGTest */ = {
+			isa = PBXGroup;
+			children = (
+				2BB65FE92547058B0047AE86 /* MAGTestViewController.h */,
+				2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */,
+			);
+			path = MAGTest;
+			sourceTree = "<group>";
+		};
+		2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */ = {
+			isa = PBXGroup;
+			children = (
+				2B1D8A3425CC244D005CDF83 /* Manager */,
+				2B1D8A2A25CC2402005CDF83 /* View */,
+				2B1D8A2925CC2334005CDF83 /* ViewController */,
+			);
+			path = MAGScanQR;
+			sourceTree = "<group>";
+		};
+		2B1D8A2925CC2334005CDF83 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B1D8A2325CC2330005CDF83 /* MAGScanViewController.h */,
+				2B1D8A2425CC2330005CDF83 /* MAGScanViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2B1D8A2A25CC2402005CDF83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B1D8A2B25CC243E005CDF83 /* MAGScanView.h */,
+				2B1D8A2C25CC243E005CDF83 /* MAGScanView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B1D8A3425CC244D005CDF83 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2B1D8A4125CC2482005CDF83 /* MAGCameraScanManager.h */,
+				2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +270,8 @@
 		2B90EF07256D276F002A2B20 /* MAGRank */ = {
 			isa = PBXGroup;
 			children = (
+				2BB65FE3254705800047AE86 /* MAGRankViewController.h */,
+				2BB65FE4254705800047AE86 /* MAGRankViewController.m */,
 				2B90EF0D256D276F002A2B20 /* MyTableViewContrllor.h */,
 				2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */,
 				2B90EF0A256D276F002A2B20 /* DataArray.h */,
@@ -255,6 +321,9 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
+				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
+				2B1D52AC25C2B654005CDF83 /* MAGTest */,
+				2B1D52AB25C2B64B005CDF83 /* MAGFeed */,
 				2B3A2E5925BEBEC300F568E7 /* MAGTool */,
 				2B3A2E4325BEA19100F568E7 /* MAGLaunch */,
 				2B90EF1A256D2778002A2B20 /* MAGUser */,
@@ -268,12 +337,6 @@
 				2BB65C8D2546F9120047AE86 /* main.m */,
 				2BB65FC8254703C20047AE86 /* MAGRootViewController.h */,
 				2BB65FC9254703C20047AE86 /* MAGRootViewController.m */,
-				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
-				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
-				2BB65FE3254705800047AE86 /* MAGRankViewController.h */,
-				2BB65FE4254705800047AE86 /* MAGRankViewController.m */,
-				2BB65FE92547058B0047AE86 /* MAGTestViewController.h */,
-				2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */,
 			);
 			path = Magina;
 			sourceTree = "<group>";
@@ -543,7 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1D8A4325CC2482005CDF83 /* MAGCameraScanManager.m in Sources */,
 				2B8B582A257CA0750015F29B /* MAGUIConfigCenter.m in Sources */,
+				2B1D8A2525CC2330005CDF83 /* MAGScanViewController.m in Sources */,
 				2B90EF24256D2778002A2B20 /* People.m in Sources */,
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
@@ -555,6 +620,7 @@
 				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,
 				2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */,
 				2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */,
+				2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */,
 				2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */,
 				2BB65FD6254705060047AE86 /* MAGFeedViewController.m in Sources */,
 				2B90EF25256D2778002A2B20 /* MAGEditUserInfoViewController.m in Sources */,

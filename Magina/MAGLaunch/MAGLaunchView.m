@@ -48,14 +48,9 @@ static const CGFloat finishAnimationDuration = 0.5;
         self.launchImageView.image = [UIImage imageNamed:@"LaunchImage_vertical"];
     }
     self.launchImageView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.launchImageView addSubview:self.skipButton];
-    [self.skipButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.launchImageView.mas_right).offset(20);
-        make.top.equalTo(self.launchImageView.mas_top).offset(-50-[UIDevice safeAreaTopInset]);
-    }];
     [self addSubview:self.launchImageView];
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
+    [self addSubview:self.skipButton];
+    [self sendSubviewToBack:self.launchImageView];
 }
 
 #pragma mark - action
@@ -95,8 +90,8 @@ static const CGFloat finishAnimationDuration = 0.5;
 - (UIButton *)skipButton
 {
     if (!_skipButton) {
-        _skipButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
-        _skipButton.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.2];
+        _skipButton = [[UIButton alloc] initWithFrame:CGRectMake(300, [UIDevice safeAreaTopInset] + 50, 100, 50)];
+        _skipButton.backgroundColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:0.7];
         _skipButton.layer.cornerRadius = 10;
         _skipButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [_skipButton setTitle:@"跳过动画" forState:UIControlStateNormal];
