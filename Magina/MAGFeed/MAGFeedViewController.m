@@ -35,7 +35,7 @@
 
 - (void)scanButtonClicked
 {
-    NSLog(@"点击了扫一扫入口");
+    //打开扫码控制器
     MAGScanViewController *scanVC = [[MAGScanViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:scanVC];
     navigationController.modalPresentationStyle = UIModalPresentationFullScreen;

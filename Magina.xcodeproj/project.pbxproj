@@ -168,6 +168,7 @@
 		2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */ = {
 			isa = PBXGroup;
 			children = (
+				2B1D8A6025CD2545005CDF83 /* ViewModel */,
 				2B1D8A3425CC244D005CDF83 /* Manager */,
 				2B1D8A2A25CC2402005CDF83 /* View */,
 				2B1D8A2925CC2334005CDF83 /* ViewController */,
@@ -200,6 +201,13 @@
 				2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		2B1D8A6025CD2545005CDF83 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {

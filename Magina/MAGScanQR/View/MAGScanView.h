@@ -7,10 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface MAGScanView : UIView
 
-@end
 
-NS_ASSUME_NONNULL_END
+@end

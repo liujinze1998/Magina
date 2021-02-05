@@ -39,11 +39,11 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{
         NSForegroundColorAttributeName:[UIColor grayColor],
-        NSFontAttributeName:[UIFont fontWithName:@"HeiTi SC" size:15]
+        NSFontAttributeName:[UIFont fontWithName:@"HeiTi SC" size:18]
     } forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{
         NSForegroundColorAttributeName:[UIColor redColor],
-        NSFontAttributeName:[UIFont fontWithName:@"HeiTi SC" size:15]
+        NSFontAttributeName:[UIFont fontWithName:@"HeiTi SC" size:18]
     } forState:UIControlStateSelected];
 }
 

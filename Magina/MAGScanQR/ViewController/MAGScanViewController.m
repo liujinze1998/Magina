@@ -8,8 +8,9 @@
 #import "MAGScanViewController.h"
 #import "MAGScanView.h"
 #import "MAGCameraScanManager.h"
+#import "MAGUIConfigCenter.h"
 
-@interface MAGScanViewController ()
+@interface MAGScanViewController ()<MAGCameraScanManagerDelegate>
 
 @property (nonatomic, strong) MAGScanView *scanningView;
 @property (nonatomic, strong) MAGCameraScanManager *cameraManager;
@@ -17,28 +18,36 @@
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIButton *enterAlbumButton;
 
+@property (nonatomic, strong) UILabel *flashtipLabel;
+@property (nonatomic, strong) UIButton *flashButton;
+
 @end
 
 @implementation MAGScanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.scanningView];
     [self createNavBarUI];
+    [self bindScanManager];
+    //相机授权
 }
 
-// 以push/pop形式推出navvc的childvc的时候 这样设置动画更加平滑
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    [self.navigationController setNavigationBarHidden:NO animated:animated];
-//}
-//
-//- (void)viewWillDisappear:(BOOL)animated
-//{
-//    [super viewWillDisappear:animated];
-//    [self.navigationController setNavigationBarHidden:YES animated:animated];
-//}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.cameraManager startRunning];
+    [self.cameraManager startSampleBufferDelegate];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.cameraManager stopRunning];
+    [self.cameraManager cancelSampleBufferDelegate];
+    self.cameraManager.delegate = self;
+}
 
 - (void)createNavBarUI
 {
@@ -50,6 +59,23 @@
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 }
 
+- (void)bindScanManager
+{
+    self.cameraManager = [MAGCameraScanManager sharedCameraScanManager];
+    [self.cameraManager createCameraSessionWith:self];
+}
+
+#pragma mark - 识别回调
+
+- (void)QRCodeScanManager:(MAGCameraScanManager *)scanManager didOutputMetadataObjects:(NSArray *)metadataObjects
+{
+    
+}
+
+- (void)QRCodeScanManager:(MAGCameraScanManager *)scanManager brightnessValue:(CGFloat)brightnessValue
+{
+    
+}
 
 #pragma mark - action
 
@@ -86,6 +112,14 @@
         [_enterAlbumButton addTarget:self action:@selector(enterAlbumButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _enterAlbumButton;
+}
+
+- (MAGScanView *)scanningView
+{
+    if (!_scanningView) {
+        _scanningView = [[MAGScanView alloc] initWithFrame:CGRectMake(scanBorderX, scanBorderY, scanAreaX, scanAreaX)];
+    }
+    return _scanningView;
 }
 
 @end

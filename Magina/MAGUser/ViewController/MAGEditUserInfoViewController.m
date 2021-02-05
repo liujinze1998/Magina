@@ -24,6 +24,19 @@
 
 @implementation MAGEditUserInfoViewController
 
+// 以push/pop形式推出navvc的childvc的时候 这样设置动画更加平滑
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:YES animated:animated];
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _peo = [People SharedInstance];
