@@ -10,11 +10,14 @@
 #import "MAGCameraScanManager.h"
 #import "MAGUIConfigCenter.h"
 
+#import <AVFoundation/AVFoundation.h>
+
 @interface MAGScanViewController ()<MAGCameraScanManagerDelegate>
 
 @property (nonatomic, strong) MAGScanView *scanningView;
 @property (nonatomic, strong) MAGCameraScanManager *cameraManager;
 
+@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIButton *enterAlbumButton;
 
@@ -27,10 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.scanningView];
     [self createNavBarUI];
     [self bindScanManager];
+    [self addNotification];
     //相机授权
 }
 
@@ -46,12 +50,11 @@
     [super viewDidDisappear:animated];
     [self.cameraManager stopRunning];
     [self.cameraManager cancelSampleBufferDelegate];
-    self.cameraManager.delegate = self;
 }
 
 - (void)createNavBarUI
 {
-    self.navigationItem.title = @"扫一扫";
+    self.navigationItem.titleView = self.titleLabel;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.closeButton];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.enterAlbumButton];
     
@@ -62,14 +65,31 @@
 - (void)bindScanManager
 {
     self.cameraManager = [MAGCameraScanManager sharedCameraScanManager];
+    self.cameraManager.delegate = self;
+    [self checkCameraAuth];
     [self.cameraManager createCameraSessionWith:self];
+}
+
+- (void)addNotification
+{
+//    UIApplicationDidEnterBackgroundNotification
+    //开关手电筒
 }
 
 #pragma mark - 识别回调
 
 - (void)QRCodeScanManager:(MAGCameraScanManager *)scanManager didOutputMetadataObjects:(NSArray *)metadataObjects
 {
-    
+    if (!metadataObjects || metadataObjects.count == 0) {
+        NSLog(@"未发现二维码");// todo toast instead
+    } else {
+        AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
+        NSString *scanResult = obj.stringValue;
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"扫描结果" message:scanResult preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
+        NSLog(@"扫码结果：%@",scanResult);
+    }
 }
 
 - (void)QRCodeScanManager:(MAGCameraScanManager *)scanManager brightnessValue:(CGFloat)brightnessValue
@@ -90,14 +110,41 @@
     //未开发
 }
 
+#pragma mark - private helper methods
+
+- (void)checkCameraAuth
+{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if(authStatus ==AVAuthorizationStatusRestricted|| authStatus ==AVAuthorizationStatusDenied){
+        NSString *messageText = @"请在iPhone的“设置”-“隐私”-“相机”功能中，找到“Magina”打开相机访问权限";
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"相机无权限" message:messageText preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
+}
+
 #pragma mark - lazy init
+- (UILabel *)titleLabel
+{
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , 100, 44)];
+        _titleLabel.backgroundColor = [UIColor clearColor];
+        _titleLabel.font = [UIFont boldSystemFontOfSize:20];
+        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.text = @"扫一扫";
+    }
+    return _titleLabel;
+}
 
 - (UIButton *)closeButton
 {
     if (!_closeButton) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setTitle:@"关闭" forState:UIControlStateNormal];
-        [_closeButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+        _closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+        [_closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_closeButton addTarget:self action:@selector(closeButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _closeButton;
@@ -108,7 +155,8 @@
     if (!_enterAlbumButton) {
         _enterAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_enterAlbumButton setTitle:@"相册" forState:UIControlStateNormal];
-        [_enterAlbumButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+        _enterAlbumButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+        [_enterAlbumButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_enterAlbumButton addTarget:self action:@selector(enterAlbumButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _enterAlbumButton;

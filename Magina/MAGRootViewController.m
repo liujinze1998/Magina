@@ -14,7 +14,6 @@
 
 @interface MAGRootViewController ()
 
-@property (nonatomic, strong) MAGLaunchView *launchView;
 @property (nonatomic, assign) BOOL hasFirstAppeared;
 
 @end
@@ -45,22 +44,6 @@
         NSForegroundColorAttributeName:[UIColor redColor],
         NSFontAttributeName:[UIFont fontWithName:@"HeiTi SC" size:18]
     } forState:UIControlStateSelected];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (!self.hasFirstAppeared) {
-        self.hasFirstAppeared = YES;
-        [self showLaunchAnimation];
-    }
-}
-
-- (void)showLaunchAnimation
-{
-    self.launchView = [[MAGLaunchView alloc] initLaunchView];
-    [self.view addSubview:self.launchView];
-    [self.view bringSubviewToFront:self.launchView];
-    [self.launchView startAnimation];
 }
 
 @end

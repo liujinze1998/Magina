@@ -17,17 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
     // Do any additional setup after loading the view.
-    MyTableViewContrllor* vc = [[MyTableViewContrllor alloc]initWithStyle:UITableViewStyleGrouped];
+    MyTableViewContrllor *vc = [[MyTableViewContrllor alloc] initWithStyle:UITableViewStyleGrouped];
     vc.view.backgroundColor = [UIColor whiteColor];
     vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
     [self addChildViewController:vc];
     [self.view addSubview:vc.view];
     [vc.header.alertButton addTarget:self action:@selector(showVCAlert) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
-- (void)showVCAlert{
+- (void)showVCAlert
+{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *stepChallenge = [UIAlertAction actionWithTitle:@"发起步数挑战" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"点击了发起步数挑战按钮");
@@ -51,16 +56,5 @@
     [alertController addAction:cancel];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
 

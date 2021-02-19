@@ -58,7 +58,7 @@ static const CGFloat finishAnimationDuration = 0.5;
 - (void)startAnimation
 {
     self.launchImageView.alpha = 0.9;
-    [UIView animateWithDuration:5
+    [UIView animateWithDuration:startAnimationDuration
                           delay:0
                         options:UIViewAnimationOptionTransitionNone
                      animations:^{
@@ -70,6 +70,7 @@ static const CGFloat finishAnimationDuration = 0.5;
                          animations:^{
             self.launchImageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
         } completion:^(BOOL finished) {
+            self.skipButton.alpha = 0;
             [UIView animateWithDuration:finishAnimationDuration
                              animations:^{
                 self.launchImageView.alpha = 0;

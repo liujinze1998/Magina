@@ -45,7 +45,13 @@
         //设备有毛病
         return;
     }
+    
+    self.session = [[AVCaptureSession alloc] init];
+    self.session.sessionPreset = AVCaptureSessionPresetPhoto;
+    [self.session addInput:self.deviceInput];
+    
     self.metadataOutput = [[AVCaptureMetadataOutput alloc] init];
+    [self.session addOutput:self.metadataOutput]; //识别数据输出
     [self.metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     self.metadataOutput.rectOfInterest = CGRectMake(scanBorderY/ kScreenHeight, scanBorderX / kScreenWidth, scanAreaX / kScreenHeight , scanAreaX / kScreenWidth);
     // 数据输出类型，扫码支持的编码格式(如下设置条形码和二维码兼容)
@@ -53,13 +59,8 @@
     self.metadataOutput.metadataObjectTypes = metadateArray;
     
     self.videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
-    [self.videoDataOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
-
-    self.session = [[AVCaptureSession alloc] init];
-    self.session.sessionPreset = AVCaptureSessionPresetPhoto;
-    [self.session addInput:self.deviceInput];
-    [self.session addOutput:self.metadataOutput]; //识别数据输出
     [self.session addOutput:self.videoDataOutput]; //识别光线强弱
+    [self.videoDataOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
 
     self.videoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     self.videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
