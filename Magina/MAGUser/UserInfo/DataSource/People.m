@@ -17,6 +17,16 @@ static People* sharedSingleton = nil;
 }
 
 -(instancetype)init{
+    //NSUserDefaults 持久化 信息替换为
+    // 获取Document目录
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+//
+//    // 获取Cache目录
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+//
+//    // 获取Library目录
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
+
     self = [super init];
     self.name = @"隔壁的热心老王";
     self.DNum = @"wzyh2004";

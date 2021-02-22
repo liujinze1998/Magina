@@ -66,7 +66,6 @@
 {
     self.cameraManager = [MAGCameraScanManager sharedCameraScanManager];
     self.cameraManager.delegate = self;
-    [self checkCameraAuth];
     [self.cameraManager createCameraSessionWith:self];
 }
 
@@ -111,18 +110,6 @@
 }
 
 #pragma mark - private helper methods
-
-- (void)checkCameraAuth
-{
-    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if(authStatus ==AVAuthorizationStatusRestricted|| authStatus ==AVAuthorizationStatusDenied){
-        NSString *messageText = @"请在iPhone的“设置”-“隐私”-“相机”功能中，找到“Magina”打开相机访问权限";
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"相机无权限" message:messageText preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];
-        return;
-    }
-}
 
 #pragma mark - lazy init
 - (UILabel *)titleLabel

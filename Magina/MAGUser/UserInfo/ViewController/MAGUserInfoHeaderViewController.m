@@ -7,11 +7,14 @@
 
 #import "MAGUserInfoHeaderViewController.h"
 #import "People.h"
-#import <Masonry/Masonry.h>
+
 #import "MAGEditUserInfoViewController.h"
 #import "UIDevice+MAGAdapt.h"
+#import "MAGCaptureAlbumManager.h"
 
-@interface MAGUserInfoHeaderViewController ()
+#import <Masonry/Masonry.h>
+
+@interface MAGUserInfoHeaderViewController () <MAGImagePickerDelegate>
 
 @property (nonatomic, strong) UIView *parentView;//牵扯太多，懂得都懂
 @property (nonatomic, assign) CGFloat topOffset;
@@ -124,7 +127,7 @@
 {
     //图片高度
     CGFloat imageHeight = self.userBackgroundImageView.bounds.size.height;
-    //图片宽度
+    //图片宽度/Users/bytedance/Desktop/Magina/Magina/MAGUser/UserInfo/New Group
     CGFloat imageWidth = self.userBackgroundImageView.bounds.size.width;
 
     //下拉
@@ -139,7 +142,20 @@
 #pragma mark - action
 - (void)backgroundImageViewClicked
 {
-    //imagepicker选项
+    UIAlertController *replaceBGImageAlertSheet = [UIAlertController alertControllerWithTitle:@"更换背景图" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [replaceBGImageAlertSheet addAction:[UIAlertAction actionWithTitle:@"现在拍一张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        MAGCaptureAlbumManager *imagePickerManager = [MAGCaptureAlbumManager sharedManager];
+        imagePickerManager.delegate = self;
+        [imagePickerManager replaceImageFromCaptureWithCurrentController:self];
+        
+    }]];
+    [replaceBGImageAlertSheet addAction:[UIAlertAction actionWithTitle:@"相册选一张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        MAGCaptureAlbumManager *imagePickerManager = [MAGCaptureAlbumManager sharedManager];
+        imagePickerManager.delegate = self;
+        [imagePickerManager replaceImageFromAlbumWithCurrentController:self];
+    }]];
+    [replaceBGImageAlertSheet addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:replaceBGImageAlertSheet animated:YES completion:nil];
 }
 
 - (void)settingsButtonClicked
@@ -152,6 +168,13 @@
     //先进tableviewcontroller 里面可编辑信息+换头像
     MAGEditUserInfoViewController *editInfoViewController = [[MAGEditUserInfoViewController alloc] init];
     [self presentViewController:editInfoViewController animated:YES completion:nil];
+}
+
+#pragma mark - MAGImagePicker
+
+- (void)didFinishPickingImage:(UIImage *)image
+{
+    self.userBackgroundImageView.image = image;
 }
 
 #pragma mark - init UI

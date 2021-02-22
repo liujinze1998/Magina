@@ -33,6 +33,8 @@
 		2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FDE254705290047AE86 /* MAGUserViewController.m */; };
 		2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FE4254705800047AE86 /* MAGRankViewController.m */; };
 		2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */; };
+		2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */; };
+		2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */; };
 		32C423BC833BCDD0E77509F3 /* libPods-MaginaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C513891F7F289B972747673B /* libPods-MaginaTests.a */; };
 		7A9EBB2209B0C239E3341EDB /* libPods-MaginaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B66E469DC2CC50CACA72F /* libPods-MaginaUITests.a */; };
 		CFCAF0CA6A17DCDBC95BD970 /* libPods-Magina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 826770D7D84090700B5586F3 /* libPods-Magina.a */; };
@@ -109,6 +111,10 @@
 		2BB65FE4254705800047AE86 /* MAGRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGRankViewController.m; sourceTree = "<group>"; };
 		2BB65FE92547058B0047AE86 /* MAGTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGTestViewController.h; sourceTree = "<group>"; };
 		2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGTestViewController.m; sourceTree = "<group>"; };
+		2BD66B9725E38CE30091D4C0 /* MAGCaptureAlbumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGCaptureAlbumManager.h; sourceTree = "<group>"; };
+		2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGCaptureAlbumManager.m; sourceTree = "<group>"; };
+		2BD66BB625E393980091D4C0 /* MAGDeviceAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGDeviceAuth.h; sourceTree = "<group>"; };
+		2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGDeviceAuth.m; sourceTree = "<group>"; };
 		310FDF1539F915175A329D81 /* Pods-Magina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.release.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.release.xcconfig"; sourceTree = "<group>"; };
 		76C5C36A71FE26710FF0A87C /* Pods-MaginaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaginaTests.debug.xcconfig"; path = "Target Support Files/Pods-MaginaTests/Pods-MaginaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		826770D7D84090700B5586F3 /* libPods-Magina.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Magina.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +237,7 @@
 		2B3A2E5925BEBEC300F568E7 /* MAGTool */ = {
 			isa = PBXGroup;
 			children = (
+				2BD66BB525E393250091D4C0 /* MAGDeviceAuth */,
 				2B8B581C257C8CCF0015F29B /* MAGDeviceHelper */,
 				2B3A2E5825BEBEAC00F568E7 /* MAGUIHelper */,
 			);
@@ -297,9 +304,8 @@
 		2B90EF1A256D2778002A2B20 /* MAGUser */ = {
 			isa = PBXGroup;
 			children = (
-				2B53FEB22577CA7E00C520F6 /* DataSource */,
-				2B53FEB12577CA3B00C520F6 /* View */,
-				2B53FEB02577CA2C00C520F6 /* ViewController */,
+				2BD6682725E3617E0091D4C0 /* UserInfo */,
+				2BD6682625E361500091D4C0 /* SystemSetting */,
 			);
 			path = MAGUser;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
+				2BD66B9625E38C270091D4C0 /* MAGCaptureAlbum */,
 				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
 				2B1D52AC25C2B654005CDF83 /* MAGTest */,
 				2B1D52AB25C2B64B005CDF83 /* MAGFeed */,
@@ -365,6 +372,49 @@
 				2BB65CA42546F9120047AE86 /* Info.plist */,
 			);
 			path = MaginaUITests;
+			sourceTree = "<group>";
+		};
+		2BD6682625E361500091D4C0 /* SystemSetting */ = {
+			isa = PBXGroup;
+			children = (
+				2BD6682825E361940091D4C0 /* ViewController */,
+			);
+			path = SystemSetting;
+			sourceTree = "<group>";
+		};
+		2BD6682725E3617E0091D4C0 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2B53FEB22577CA7E00C520F6 /* DataSource */,
+				2B53FEB12577CA3B00C520F6 /* View */,
+				2B53FEB02577CA2C00C520F6 /* ViewController */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		2BD6682825E361940091D4C0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2BD66B9625E38C270091D4C0 /* MAGCaptureAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				2BD66B9725E38CE30091D4C0 /* MAGCaptureAlbumManager.h */,
+				2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */,
+			);
+			path = MAGCaptureAlbum;
+			sourceTree = "<group>";
+		};
+		2BD66BB525E393250091D4C0 /* MAGDeviceAuth */ = {
+			isa = PBXGroup;
+			children = (
+				2BD66BB625E393980091D4C0 /* MAGDeviceAuth.h */,
+				2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */,
+			);
+			path = MAGDeviceAuth;
 			sourceTree = "<group>";
 		};
 		981795B5454D129EF91DA13A /* Frameworks */ = {
@@ -621,8 +671,10 @@
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
+				2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */,
 				2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */,
 				2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */,
+				2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */,
 				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
 				2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */,
 				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,

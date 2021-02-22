@@ -123,6 +123,7 @@
             _headerViewController = [[MAGUserInfoHeaderViewController alloc] initWithParentView:userInfoView navHeight:self.navigationController.navigationBar.frame.size.height];
         }
         [userInfoView addSubview:_headerViewController.view];
+        //这里用viewcontroller会有bug，需要换成view todo
         return userInfoView;
     } else if (indexPath.section == 1 && [kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *switchSourceTabHeaderView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
