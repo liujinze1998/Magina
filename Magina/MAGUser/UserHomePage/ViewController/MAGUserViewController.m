@@ -9,7 +9,6 @@
 #import <Masonry.h>
 
 #import "MAGUserInfoHeaderViewController.h"
-#import "MAGEditUserInfoViewController.h"
 #import "People.h"
 
 @interface MAGUserViewController () <UICollectionViewDataSource, UICollectionViewDelegate>

@@ -8,9 +8,9 @@
 #import "MAGUserInfoHeaderViewController.h"
 #import "People.h"
 
-#import "MAGEditUserInfoViewController.h"
 #import "UIDevice+MAGAdapt.h"
 #import "MAGCaptureAlbumManager.h"
+#import "Magina-Swift.h"
 
 #import <Masonry/Masonry.h>
 
@@ -165,9 +165,9 @@
 
 - (void)editUserInfoButtonClicked
 {
-    //先进tableviewcontroller 里面可编辑信息+换头像
-    MAGEditUserInfoViewController *editInfoViewController = [[MAGEditUserInfoViewController alloc] init];
-    [self presentViewController:editInfoViewController animated:YES completion:nil];
+    MAGUserInfoViewController *infoViewController = [[MAGUserInfoViewController alloc] init];
+//    [self.navigationController pushViewController:infoViewController animated:YES];
+    [self presentViewController:infoViewController animated:YES completion:nil];
 }
 
 #pragma mark - MAGImagePicker

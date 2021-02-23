@@ -19,7 +19,6 @@
 		2B90EF15256D276F002A2B20 /* DataArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF0E256D276F002A2B20 /* DataArray.m */; };
 		2B90EF16256D276F002A2B20 /* RankData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF11256D276F002A2B20 /* RankData.m */; };
 		2B90EF24256D2778002A2B20 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1B256D2778002A2B20 /* People.m */; };
-		2B90EF25256D2778002A2B20 /* MAGEditUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1C256D2778002A2B20 /* MAGEditUserInfoViewController.m */; };
 		2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */; };
 		2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65C7C2546F9110047AE86 /* AppDelegate.m */; };
 		2BB65C862546F9110047AE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C842546F9110047AE86 /* Main.storyboard */; };
@@ -35,6 +34,8 @@
 		2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */; };
 		2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */; };
 		2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */; };
+		2BD66BD625E3B4DD0091D4C0 /* MAGUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BD525E3B4DD0091D4C0 /* MAGUserInfoViewController.swift */; };
+		2BD66F6625E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66F6525E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift */; };
 		32C423BC833BCDD0E77509F3 /* libPods-MaginaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C513891F7F289B972747673B /* libPods-MaginaTests.a */; };
 		7A9EBB2209B0C239E3341EDB /* libPods-MaginaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B66E469DC2CC50CACA72F /* libPods-MaginaUITests.a */; };
 		CFCAF0CA6A17DCDBC95BD970 /* libPods-Magina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 826770D7D84090700B5586F3 /* libPods-Magina.a */; };
@@ -82,9 +83,7 @@
 		2B90EF10256D276F002A2B20 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		2B90EF11256D276F002A2B20 /* RankData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankData.m; sourceTree = "<group>"; };
 		2B90EF1B256D2778002A2B20 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
-		2B90EF1C256D2778002A2B20 /* MAGEditUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGEditUserInfoViewController.m; sourceTree = "<group>"; };
 		2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGUserInfoHeaderViewController.m; sourceTree = "<group>"; };
-		2B90EF20256D2778002A2B20 /* MAGEditUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGEditUserInfoViewController.h; sourceTree = "<group>"; };
 		2B90EF21256D2778002A2B20 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		2B90EF23256D2778002A2B20 /* MAGUserInfoHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGUserInfoHeaderViewController.h; sourceTree = "<group>"; };
 		2BB65C782546F9110047AE86 /* Magina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magina.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +114,10 @@
 		2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGCaptureAlbumManager.m; sourceTree = "<group>"; };
 		2BD66BB625E393980091D4C0 /* MAGDeviceAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGDeviceAuth.h; sourceTree = "<group>"; };
 		2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGDeviceAuth.m; sourceTree = "<group>"; };
+		2BD66BD425E3B4DC0091D4C0 /* Magina-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Magina-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BD66BD525E3B4DD0091D4C0 /* MAGUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGUserInfoViewController.swift; sourceTree = "<group>"; };
+		2BD66BE925E3BD3A0091D4C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2BD66F6525E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGUserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		310FDF1539F915175A329D81 /* Pods-Magina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.release.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.release.xcconfig"; sourceTree = "<group>"; };
 		76C5C36A71FE26710FF0A87C /* Pods-MaginaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaginaTests.debug.xcconfig"; path = "Target Support Files/Pods-MaginaTests/Pods-MaginaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		826770D7D84090700B5586F3 /* libPods-Magina.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Magina.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +159,7 @@
 		2B1D52AB25C2B64B005CDF83 /* MAGFeed */ = {
 			isa = PBXGroup;
 			children = (
+				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
 				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
 				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
 			);
@@ -221,6 +225,11 @@
 			children = (
 				2B3A2E4425BEA1FF00F568E7 /* MAGLaunchView.h */,
 				2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */,
+				2BB65FC8254703C20047AE86 /* MAGRootViewController.h */,
+				2BB65FC9254703C20047AE86 /* MAGRootViewController.m */,
+				2BB65C7B2546F9110047AE86 /* AppDelegate.h */,
+				2BB65C7C2546F9110047AE86 /* AppDelegate.m */,
+				2BB65C892546F9120047AE86 /* LaunchScreen.storyboard */,
 			);
 			path = MAGLaunch;
 			sourceTree = "<group>";
@@ -247,12 +256,8 @@
 		2B53FEB02577CA2C00C520F6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2B90EF23256D2778002A2B20 /* MAGUserInfoHeaderViewController.h */,
-				2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */,
 				2BB65FDD254705290047AE86 /* MAGUserViewController.h */,
 				2BB65FDE254705290047AE86 /* MAGUserViewController.m */,
-				2B90EF20256D2778002A2B20 /* MAGEditUserInfoViewController.h */,
-				2B90EF1C256D2778002A2B20 /* MAGEditUserInfoViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -260,6 +265,8 @@
 		2B53FEB12577CA3B00C520F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B90EF23256D2778002A2B20 /* MAGUserInfoHeaderViewController.h */,
+				2B90EF1E256D2778002A2B20 /* MAGUserInfoHeaderViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,12 +297,12 @@
 				2B90EF0D256D276F002A2B20 /* MyTableViewContrllor.h */,
 				2B90EF09256D276F002A2B20 /* MyTableViewContrllor.m */,
 				2B90EF0A256D276F002A2B20 /* DataArray.h */,
-				2B90EF0B256D276F002A2B20 /* TableViewCell.m */,
-				2B90EF0C256D276F002A2B20 /* RankData.h */,
 				2B90EF0E256D276F002A2B20 /* DataArray.m */,
+				2B90EF10256D276F002A2B20 /* TableViewCell.h */,
+				2B90EF0B256D276F002A2B20 /* TableViewCell.m */,
 				2B90EF0F256D276F002A2B20 /* MyHeaderView.h */,
 				2B90EF08256D276F002A2B20 /* MyHeaderView.m */,
-				2B90EF10256D276F002A2B20 /* TableViewCell.h */,
+				2B90EF0C256D276F002A2B20 /* RankData.h */,
 				2B90EF11256D276F002A2B20 /* RankData.m */,
 			);
 			path = MAGRank;
@@ -304,7 +311,10 @@
 		2B90EF1A256D2778002A2B20 /* MAGUser */ = {
 			isa = PBXGroup;
 			children = (
-				2BD6682725E3617E0091D4C0 /* UserInfo */,
+				2B53FEB22577CA7E00C520F6 /* DataSource */,
+				2BD66B9625E38C270091D4C0 /* MAGCaptureAlbum */,
+				2BD66BCA25E3AC4F0091D4C0 /* EditUserInfo */,
+				2BD6682725E3617E0091D4C0 /* UserHomePage */,
 				2BD6682625E361500091D4C0 /* SystemSetting */,
 			);
 			path = MAGUser;
@@ -335,23 +345,17 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
-				2BD66B9625E38C270091D4C0 /* MAGCaptureAlbum */,
-				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
-				2B1D52AC25C2B654005CDF83 /* MAGTest */,
-				2B1D52AB25C2B64B005CDF83 /* MAGFeed */,
-				2B3A2E5925BEBEC300F568E7 /* MAGTool */,
-				2B3A2E4325BEA19100F568E7 /* MAGLaunch */,
 				2B90EF1A256D2778002A2B20 /* MAGUser */,
+				2B1D52AC25C2B654005CDF83 /* MAGTest */,
 				2B90EF07256D276F002A2B20 /* MAGRank */,
-				2BB65C7B2546F9110047AE86 /* AppDelegate.h */,
-				2BB65C7C2546F9110047AE86 /* AppDelegate.m */,
+				2B1D52AB25C2B64B005CDF83 /* MAGFeed */,
+				2B3A2E4325BEA19100F568E7 /* MAGLaunch */,
+				2B3A2E5925BEBEC300F568E7 /* MAGTool */,
+				2BD66BE825E3BD250091D4C0 /* SwiftConfig */,
 				2BB65C842546F9110047AE86 /* Main.storyboard */,
 				2BB65C872546F9120047AE86 /* Assets.xcassets */,
-				2BB65C892546F9120047AE86 /* LaunchScreen.storyboard */,
 				2BB65C8C2546F9120047AE86 /* Info.plist */,
 				2BB65C8D2546F9120047AE86 /* main.m */,
-				2BB65FC8254703C20047AE86 /* MAGRootViewController.h */,
-				2BB65FC9254703C20047AE86 /* MAGRootViewController.m */,
 			);
 			path = Magina;
 			sourceTree = "<group>";
@@ -382,14 +386,13 @@
 			path = SystemSetting;
 			sourceTree = "<group>";
 		};
-		2BD6682725E3617E0091D4C0 /* UserInfo */ = {
+		2BD6682725E3617E0091D4C0 /* UserHomePage */ = {
 			isa = PBXGroup;
 			children = (
-				2B53FEB22577CA7E00C520F6 /* DataSource */,
 				2B53FEB12577CA3B00C520F6 /* View */,
 				2B53FEB02577CA2C00C520F6 /* ViewController */,
 			);
-			path = UserInfo;
+			path = UserHomePage;
 			sourceTree = "<group>";
 		};
 		2BD6682825E361940091D4C0 /* ViewController */ = {
@@ -415,6 +418,24 @@
 				2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */,
 			);
 			path = MAGDeviceAuth;
+			sourceTree = "<group>";
+		};
+		2BD66BCA25E3AC4F0091D4C0 /* EditUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2BD66BD525E3B4DD0091D4C0 /* MAGUserInfoViewController.swift */,
+				2BD66F6525E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift */,
+			);
+			path = EditUserInfo;
+			sourceTree = "<group>";
+		};
+		2BD66BE825E3BD250091D4C0 /* SwiftConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2BD66BE925E3BD3A0091D4C0 /* PrefixHeader.pch */,
+				2BD66BD425E3B4DC0091D4C0 /* Magina-Bridging-Header.h */,
+			);
+			path = SwiftConfig;
 			sourceTree = "<group>";
 		};
 		981795B5454D129EF91DA13A /* Frameworks */ = {
@@ -510,6 +531,7 @@
 				TargetAttributes = {
 					2BB65C772546F9110047AE86 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1240;
 					};
 					2BB65C922546F9120047AE86 = {
 						CreatedOnToolsVersion = 12.0;
@@ -672,9 +694,11 @@
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
 				2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */,
+				2BD66BD625E3B4DD0091D4C0 /* MAGUserInfoViewController.swift in Sources */,
 				2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */,
 				2B90EF27256D2778002A2B20 /* MAGUserInfoHeaderViewController.m in Sources */,
 				2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */,
+				2BD66F6625E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift in Sources */,
 				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
 				2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */,
 				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,
@@ -683,7 +707,6 @@
 				2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */,
 				2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */,
 				2BB65FD6254705060047AE86 /* MAGFeedViewController.m in Sources */,
-				2B90EF25256D2778002A2B20 /* MAGEditUserInfoViewController.m in Sources */,
 				2BB65C8E2546F9120047AE86 /* main.m in Sources */,
 				2BB65FCA254703C20047AE86 /* MAGRootViewController.m in Sources */,
 				2B90EF16256D276F002A2B20 /* RankData.m in Sources */,
@@ -859,8 +882,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Magina/SwiftConfig/PrefixHeader.pch";
 				INFOPLIST_FILE = Magina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -869,6 +894,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liujinze.Magina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Magina/SwiftConfig/Magina-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -879,8 +907,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Magina/SwiftConfig/PrefixHeader.pch";
 				INFOPLIST_FILE = Magina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -889,6 +919,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liujinze.Magina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Magina/SwiftConfig/Magina-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -897,6 +929,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76C5C36A71FE26710FF0A87C /* Pods-MaginaTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
@@ -918,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2610E8ADC1CFD6F115A8DF7 /* Pods-MaginaTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
@@ -939,6 +973,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94BB617D50D5AA8606F9A9D7 /* Pods-MaginaUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
 				INFOPLIST_FILE = MaginaUITests/Info.plist;
@@ -958,6 +993,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7CFF99890D365DEB740EA90 /* Pods-MaginaUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF9GAYQCV;
 				INFOPLIST_FILE = MaginaUITests/Info.plist;

@@ -10,7 +10,7 @@
 
 @protocol MAGImagePickerDelegate <NSObject>
 
-- (void)didFinishPickingImage:(UIImage *)image;
+- (void)didFinishPickingImage:(nullable UIImage *)image;
 
 @end
 
