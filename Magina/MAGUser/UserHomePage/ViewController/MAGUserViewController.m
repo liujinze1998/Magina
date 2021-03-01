@@ -8,14 +8,14 @@
 #import "MAGUserViewController.h"
 #import <Masonry.h>
 
-#import "MAGUserInfoHeaderViewController.h"
+#import "MAGUserHeaderView.h"
+#import "UIDevice+MAGAdapt.h"
+#import "Magina-Swift.h"
 #import "People.h"
 
 @interface MAGUserViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-
-@property (nonatomic, strong) MAGUserInfoHeaderViewController *headerViewController;//视觉上的header
 @property (nonatomic, strong) UIButton *addFriendsButton;//加好友
 
 @property (nonatomic, strong) UIButton *productsTabButton;//作品tab
@@ -71,11 +71,12 @@
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.sectionHeadersPinToVisibleBounds = YES;
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    CGFloat topOffSet = self.navigationController.navigationBar.frame.size.height + [UIDevice safeAreaTopInset];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y - topOffSet, self.view.bounds.size.width, self.view.bounds.size.height + topOffSet) collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerView"];
-    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerView"];
+    [self.collectionView registerClass:[MAGUserHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerView"];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -112,18 +113,11 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0 && [kind isEqualToString:UICollectionElementKindSectionFooter]){
-        UICollectionReusableView *userInfoView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+        MAGUserHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                                                                                   withReuseIdentifier:@"footerView" forIndexPath:indexPath];
-        for (UIView *view in userInfoView.subviews) {
-            [view removeFromSuperview];
-        }
-        userInfoView.backgroundColor = [UIColor blackColor];
-        if (!_headerViewController) {
-            _headerViewController = [[MAGUserInfoHeaderViewController alloc] initWithParentView:userInfoView navHeight:self.navigationController.navigationBar.frame.size.height];
-        }
-        [userInfoView addSubview:_headerViewController.view];
-        //这里用viewcontroller会有bug，需要换成view todo
-        return userInfoView;
+        headerView.parentVC = self;
+        headerView.backgroundColor = [UIColor blackColor];
+        return headerView;
     } else if (indexPath.section == 1 && [kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *switchSourceTabHeaderView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                                   withReuseIdentifier:@"headerView" forIndexPath:indexPath];
@@ -168,7 +162,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
     if (section == 0) {
-        return CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 0.3);
+        return CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 0.4);
     } else {
         return CGSizeMake(0, 0);
     }
@@ -177,12 +171,19 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat contentOffSetY = scrollView.contentOffset.y;
-    [_headerViewController homePageDidScroll:contentOffSetY];
-    
-    //设置导航条透明度
+//    CGFloat imageHeight = self.headerView.userBackgrondButton.bounds.size.height;
+//    CGFloat imageWidth = self.headerView.userBackgrondButton.bounds.size.width;
+//
+//    //下拉
+//    if (contentOffSetY < 0) {
+//        CGFloat totalHeight = imageHeight + ABS(contentOffSetY);
+//        CGFloat multiple = totalHeight / imageHeight;
+//        CGFloat totalWidth = imageWidth * multiple;
+//        self.headerView.userBackgrondButton.frame = CGRectMake(-(totalWidth - imageWidth) * 0.5, contentOffSetY, totalWidth, totalHeight);
+//    }
 }
 
-#pragma mark - acitons
+#pragma mark - action
 
 - (void)productsTabButtonClicked
 {

@@ -6,7 +6,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MAGUserInfoHeaderViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

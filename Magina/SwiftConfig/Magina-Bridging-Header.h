@@ -3,3 +3,5 @@
 //
 
 //这里放 Swift可以引入的OC文件
+#import "MAGUserDefaultsUtil.h"
+#import "MAGCaptureAlbumManager.h"
