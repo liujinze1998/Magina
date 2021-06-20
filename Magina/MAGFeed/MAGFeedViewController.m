@@ -2,16 +2,29 @@
 //  MAGFeedViewController.m
 //  Magina
 //
+
+/*
+ UINavigationItem
+ UIButton UILabel
+ */
+
 //  Created by liujinze on 2020/10/26.
 //
 
 #import "MAGFeedViewController.h"
 #import "MAGScanViewController.h"
 #import "MAGDeviceAuth.h"
+#import "MAGUIConfigCenter.h"
+#import "UIDevice+MAGAdapt.h"
+#import <Masonry/Masonry.h>
 
 @interface MAGFeedViewController ()
 
 @property (nonatomic, strong) UIButton *scanButton;//打开扫一扫
+@property (nonatomic, strong) UIButton *albumButton;//打开IGList相册
+@property (nonatomic, strong) UIButton *transGifButton;//视频转gif
+@property (nonatomic, strong) UIButton *noname1Button;//待定
+@property (nonatomic, strong) UIButton *noname2Button;//待定
 
 @end
 
@@ -20,19 +33,100 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createNavBarUI];
-    [self.view addSubview:self.scanButton];
+    [self setFunctionUI];
 }
 
 #pragma setup UI
 
-
-
 - (void)createNavBarUI
 {
+    self.scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.scanButton setImage:[UIImage imageNamed:@"scanButton"] forState:UIControlStateNormal];
+    [self.scanButton addTarget:self action:@selector(scanButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.scanButton];
+    [self.view addSubview:self.scanButton];
+}
+
+- (void)setFunctionUI
+{
+    CGFloat buttonWidth = (kScreenWidth - 40 )/ 3; //一排三个 左右间隔10
+    CGFloat topOffSet = self.navigationController.navigationBar.frame.size.height + [UIDevice safeAreaTopInset] + 20;//导航栏高度+buffer
+    
+    self.albumButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.albumButton.backgroundColor = [UIColor greenColor];
+    [self.albumButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];//让titleLabel左右局中
+    [self.albumButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];//让titleLabel上下局中 这来都是默认 所以后面不用设置
+    self.albumButton.titleLabel.numberOfLines = 2;
+    self.albumButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;//设置lineBreakMode支持换行
+    //setTitleEdgeInsets setImageEdgeInsets 设置image与title的相对边距可以实现同时显示，需要ContentHorizontalAlignment属性支持
+    [self.albumButton setTitle:@"打开\n相册" forState:UIControlStateNormal];
+    [self.albumButton addTarget:self action:@selector(albumButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.albumButton];
+    
+    self.transGifButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.transGifButton.backgroundColor = [UIColor greenColor];
+    self.transGifButton.titleLabel.numberOfLines = 2;
+    [self.transGifButton setTitle:@"视频\n转gif" forState:UIControlStateNormal];
+    [self.transGifButton addTarget:self action:@selector(transGifButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.transGifButton];
+    
+    self.noname1Button = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.noname1Button.backgroundColor = [UIColor greenColor];
+    self.noname1Button.titleLabel.numberOfLines = 2;
+    [self.noname1Button setTitle:@"等待\n开发" forState:UIControlStateNormal];
+    [self.noname1Button addTarget:self action:@selector(nonameButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.noname1Button];
+    
+    self.noname2Button = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.noname2Button.backgroundColor = [UIColor greenColor];
+    self.noname2Button.titleLabel.numberOfLines = 2;
+    [self.noname2Button setTitle:@"等待\n开发" forState:UIControlStateNormal];
+    [self.noname2Button addTarget:self action:@selector(nonameButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.noname2Button];
+    
+    //第一排
+    [self.albumButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(buttonWidth, buttonWidth));
+        make.top.equalTo(self.view).offset(topOffSet);
+        make.left.equalTo(self.view).offset(10);
+    }];
+    
+    [self.transGifButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(buttonWidth, buttonWidth));
+        make.top.equalTo(self.albumButton);
+        make.left.equalTo(self.albumButton.mas_right).offset(10);
+    }];
+    
+    [self.noname1Button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(buttonWidth, buttonWidth));
+        make.top.equalTo(self.albumButton);
+        make.left.equalTo(self.transGifButton.mas_right).offset(10);
+    }];
+    
+    //第二排
+    [self.noname2Button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(buttonWidth, buttonWidth));
+        make.top.equalTo(self.albumButton.mas_bottom).offset(10);
+        make.left.equalTo(self.albumButton);
+    }];
+    
 }
 
 #pragma mark - action
+
+- (void)albumButtonClicked
+{
+    
+}
+
+- (void)transGifButtonClicked
+{
+    
+}
+
+-(void)nonameButtonClicked{
+    
+}
 
 - (void)scanButtonClicked
 {
@@ -51,15 +145,5 @@
 }
 
 #pragma mark - lazy init
-
-- (UIButton *)scanButton
-{
-    if (!_scanButton) {
-        _scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_scanButton setImage:[UIImage imageNamed:@"scanButton"] forState:UIControlStateNormal];
-        [_scanButton addTarget:self action:@selector(scanButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _scanButton;
-}
 
 @end

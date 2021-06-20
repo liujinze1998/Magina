@@ -169,6 +169,7 @@
 		2B1D52AB25C2B64B005CDF83 /* MAGFeed */ = {
 			isa = PBXGroup;
 			children = (
+				2B2C1FCE267F4ABD00BE43C9 /* MAGAlbumList */,
 				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
 				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
 				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
@@ -228,6 +229,13 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B2C1FCE267F4ABD00BE43C9 /* MAGAlbumList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MAGAlbumList;
 			sourceTree = "<group>";
 		};
 		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {
