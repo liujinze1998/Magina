@@ -11,7 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MAGUserDefaultsUtil : NSObject
 
-
 @property (class, nonatomic, copy) NSString *userName; //昵称
 @property (class, nonatomic, copy) NSString *sex; //性别
 @property (class, nonatomic, copy) NSString *maginaNum; //magina号

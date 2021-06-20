@@ -91,7 +91,7 @@ static const CGFloat finishAnimationDuration = 0.5;
 - (UIButton *)skipButton
 {
     if (!_skipButton) {
-        _skipButton = [[UIButton alloc] initWithFrame:CGRectMake(300, [UIDevice safeAreaTopInset] + 50, 100, 50)];
+        _skipButton = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth - 120, [UIDevice safeAreaTopInset] + 50, 100, 50)];
         _skipButton.backgroundColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:0.7];
         _skipButton.layer.cornerRadius = 10;
         _skipButton.titleLabel.font = [UIFont systemFontOfSize:12];

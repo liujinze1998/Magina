@@ -1,20 +1,24 @@
 PODS:
+  - KVOController (1.2.0)
   - Masonry (1.0.2)
   - XLForm (4.2.0)
 
 DEPENDENCIES:
+  - KVOController (= 1.2.0)
   - Masonry (~> 1.0.1)
   - XLForm (= 4.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - KVOController
     - Masonry
     - XLForm
 
 SPEC CHECKSUMS:
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   XLForm: eb04ea4104f26250b70a72a7fa2eed3748dca5cd
 
-PODFILE CHECKSUM: 495c4e7fe53c15d1e7bf4cb35e1d2b477718b101
+PODFILE CHECKSUM: a68225e6a35fee7e33df3fabddab8cb22b0d96ab
 
 COCOAPODS: 1.6.1

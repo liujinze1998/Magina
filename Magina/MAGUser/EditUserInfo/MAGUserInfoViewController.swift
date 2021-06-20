@@ -117,20 +117,21 @@ extension MAGUserInfoViewController: UITableViewDataSource, UITableViewDelegate
 extension MAGUserInfoViewController : MAGImagePickerDelegate
 {
     func didFinishPicking(_ image: UIImage?) {
-        //修改持久化信息的image && reloaddata
+        //todo 修改持久化信息的image
+        self.tableView.reloadData()
     }
     
     func handleClickedForChangeAvatar() {
-        let alertController = UIAlertController(title: "更换头像", message:nil, preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "更换头像", message:nil, preferredStyle: UIAlertController.Style.actionSheet)
         let tackPicture = UIAlertAction(title: "相机拍摄", style: UIAlertAction.Style.default) { (UIAlertAction) in
-//            MAGCaptureAlbumManager *imagePickerManager = [MAGCaptureAlbumManager sharedManager];
-//            imagePickerManager.delegate = self;
-//            [imagePickerManager replaceImageFromCaptureWithCurrentController:self.parentVC];
+            let imagePickerManager : MAGCaptureAlbumManager = MAGCaptureAlbumManager.shared()
+            imagePickerManager.delegate = self
+            imagePickerManager.replaceImageFromCapture(withCurrentController: self)
         }
         let choosePickture = UIAlertAction(title: "相册选择", style: UIAlertAction.Style.default) { (UIAlertAction) in
-//            MAGCaptureAlbumManager *imagePickerManager = [MAGCaptureAlbumManager sharedManager];
-//            imagePickerManager.delegate = self;
-//            [imagePickerManager replaceImageFromAlbumWithCurrentController:self.parentVC];
+            let imagePickerManager : MAGCaptureAlbumManager = MAGCaptureAlbumManager.shared()
+            imagePickerManager.delegate = self
+            imagePickerManager.replaceImageFromAlbum(withCurrentController: self)
         }
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil)
         alertController.addAction(tackPicture)

@@ -14,8 +14,8 @@ static NSString *const kSignature = @"signature";
 
 @implementation MAGUserDefaultsUtil
 
-
 #pragma mark - setter
+
 + (void)setUserName:(NSString *)newName
 {
     [[NSUserDefaults standardUserDefaults] setObject:newName forKey:kUserName];
@@ -37,6 +37,7 @@ static NSString *const kSignature = @"signature";
 }
 
 #pragma mark - getter
+
 + (NSString *)userName
 {
     return [[NSUserDefaults standardUserDefaults] stringForKey:kUserName];

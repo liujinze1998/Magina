@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3B08377C-1475-4786-998B-8AB6618F0A19"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Magina/MAGUser/UserHomePage/View/MAGUserHeaderView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-settingsButtonClicked"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9893EE0A-3A3F-4118-B8CB-78BA1E560BEE"
+            uuid = "3211BF1D-877D-42CE-A7F4-36645BF279BF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Magina/MAGUser/EditUserInfo/MAGUserInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "handleClickedForChangeSex()"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "didFinishPicking(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

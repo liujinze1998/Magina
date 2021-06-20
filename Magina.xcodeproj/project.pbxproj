@@ -13,6 +13,9 @@
 		2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */; };
 		2B785F4025E7F1DC00A4800F /* MAGUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B785F3F25E7F1DC00A4800F /* MAGUserHeaderView.m */; };
 		2B7869C325ECC68B00A4800F /* MAGUserDefaultsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7869C225ECC68B00A4800F /* MAGUserDefaultsUtil.m */; };
+		2B786D4525EDE8D100A4800F /* MAGSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B786D4425EDE8D100A4800F /* MAGSettingsViewController.m */; };
+		2B7870D625EE1BF800A4800F /* MaginaLaunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B7870D525EE1BF800A4800F /* MaginaLaunch.jpg */; };
+		2B78896825EF837300A4800F /* MAGSettingsDefines.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B78896725EF837300A4800F /* MAGSettingsDefines.h */; };
 		2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */; };
 		2B8B582A257CA0750015F29B /* MAGUIConfigCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */; };
 		2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF08256D276F002A2B20 /* MyHeaderView.m */; };
@@ -73,6 +76,10 @@
 		2B785F3F25E7F1DC00A4800F /* MAGUserHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGUserHeaderView.m; sourceTree = "<group>"; };
 		2B7869C125ECC68B00A4800F /* MAGUserDefaultsUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGUserDefaultsUtil.h; sourceTree = "<group>"; };
 		2B7869C225ECC68B00A4800F /* MAGUserDefaultsUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGUserDefaultsUtil.m; sourceTree = "<group>"; };
+		2B786D4325EDE8D100A4800F /* MAGSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGSettingsViewController.h; sourceTree = "<group>"; };
+		2B786D4425EDE8D100A4800F /* MAGSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGSettingsViewController.m; sourceTree = "<group>"; };
+		2B7870D525EE1BF800A4800F /* MaginaLaunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MaginaLaunch.jpg; path = "../../../壁纸/MaginaLaunch.jpg"; sourceTree = "<group>"; };
+		2B78896725EF837300A4800F /* MAGSettingsDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGSettingsDefines.h; sourceTree = "<group>"; };
 		2B8B5816257C8A610015F29B /* UIDevice+MAGAdapt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MAGAdapt.h"; sourceTree = "<group>"; };
 		2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MAGAdapt.m"; sourceTree = "<group>"; };
 		2B8B5828257CA0750015F29B /* MAGUIConfigCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGUIConfigCenter.h; sourceTree = "<group>"; };
@@ -226,6 +233,7 @@
 		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {
 			isa = PBXGroup;
 			children = (
+				2B7870D525EE1BF800A4800F /* MaginaLaunch.jpg */,
 				2B3A2E4425BEA1FF00F568E7 /* MAGLaunchView.h */,
 				2B3A2E4525BEA1FF00F568E7 /* MAGLaunchView.m */,
 				2BB65FC8254703C20047AE86 /* MAGRootViewController.h */,
@@ -387,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD6682825E361940091D4C0 /* ViewController */,
+				2B78896725EF837300A4800F /* MAGSettingsDefines.h */,
 			);
 			path = SystemSetting;
 			sourceTree = "<group>";
@@ -403,6 +412,8 @@
 		2BD6682825E361940091D4C0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2B786D4325EDE8D100A4800F /* MAGSettingsViewController.h */,
+				2B786D4425EDE8D100A4800F /* MAGSettingsViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -575,6 +586,7 @@
 			files = (
 				2BB65C8B2546F9120047AE86 /* LaunchScreen.storyboard in Resources */,
 				2BB65C882546F9120047AE86 /* Assets.xcassets in Resources */,
+				2B7870D625EE1BF800A4800F /* MaginaLaunch.jpg in Resources */,
 				2BB65C862546F9110047AE86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +708,7 @@
 				2B1D8A2525CC2330005CDF83 /* MAGScanViewController.m in Sources */,
 				2B90EF24256D2778002A2B20 /* People.m in Sources */,
 				2B785F4025E7F1DC00A4800F /* MAGUserHeaderView.m in Sources */,
+				2B786D4525EDE8D100A4800F /* MAGSettingsViewController.m in Sources */,
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
@@ -712,6 +725,7 @@
 				2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */,
 				2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */,
 				2BB65FD6254705060047AE86 /* MAGFeedViewController.m in Sources */,
+				2B78896825EF837300A4800F /* MAGSettingsDefines.h in Sources */,
 				2BB65C8E2546F9120047AE86 /* main.m in Sources */,
 				2BB65FCA254703C20047AE86 /* MAGRootViewController.m in Sources */,
 				2B7869C325ECC68B00A4800F /* MAGUserDefaultsUtil.m in Sources */,

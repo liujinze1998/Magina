@@ -8,6 +8,7 @@
 #import "MAGUserHeaderView.h"
 #import <Masonry/Masonry.h>
 #import "MAGCaptureAlbumManager.h"
+#import "MAGSettingsViewController.h"
 
 @interface MAGUserHeaderView () <MAGImagePickerDelegate>
 
@@ -73,7 +74,8 @@
 
 - (void)settingsButtonClicked
 {
-    //系统设置 XLForm实现
+    MAGSettingsViewController *settingVC = [[MAGSettingsViewController alloc] init];
+    [self.parentVC.navigationController pushViewController:settingVC animated:YES];
 }
 
 - (void)editUserInfoButtonClicked
