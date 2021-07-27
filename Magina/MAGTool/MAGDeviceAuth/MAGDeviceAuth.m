@@ -10,8 +10,6 @@
 #import <Photos/Photos.h>
 
 static NSInteger currentPhotoLibrayAuthorizationStatus = PHAuthorizationStatusNotDetermined;
-static NSInteger currentCaptureAuthorizationStatus = AVAuthorizationStatusNotDetermined;
-static NSInteger currentAudioLibrayAuthorizationStatus = AVAuthorizationStatusNotDetermined;
 
 @implementation MAGDeviceAuth
 
@@ -68,20 +66,9 @@ static NSInteger currentAudioLibrayAuthorizationStatus = AVAuthorizationStatusNo
     }
 }
 
-+ (BOOL)hasMicroPhoneAuth
++ (AVAuthorizationStatus)currentAuth
 {
-    if (currentAudioLibrayAuthorizationStatus == AVAuthorizationStatusNotDetermined) {
-        currentAudioLibrayAuthorizationStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-    }
-    return currentAudioLibrayAuthorizationStatus == AVAuthorizationStatusAuthorized;
-}
-
-+ (BOOL)hasCameraAuth
-{
-    if (currentCaptureAuthorizationStatus == AVAuthorizationStatusNotDetermined) {
-        currentCaptureAuthorizationStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    }
-    return currentCaptureAuthorizationStatus == AVAuthorizationStatusAuthorized;
+    return [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
 }
 
 @end

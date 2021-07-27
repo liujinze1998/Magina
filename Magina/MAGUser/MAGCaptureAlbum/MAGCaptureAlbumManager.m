@@ -60,13 +60,22 @@
         NSLog(@"打开相机的父view是空");
         return;
     }
-    if ([MAGDeviceAuth hasCameraAuth]) {
+    if ([MAGDeviceAuth currentAuth] == AVAuthorizationStatusNotDetermined){
+        __weak typeof(self) weakSelf = self;
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+            if (granted) {
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                [strongSelf enterCaptureController];
+            }
+        }];
+    } else if ([MAGDeviceAuth currentAuth] == AVAuthorizationStatusAuthorized){
         [self enterCaptureController];
     } else {
         NSString *messageText = @"请在iPhone的“设置”-“隐私”-“相机”功能中，找到“Magina”打开相机访问权限";
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"相机无权限" message:messageText preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:nil]];
         [self.currentVC presentViewController:alertController animated:YES completion:nil];
+        return;
     }
 }
 

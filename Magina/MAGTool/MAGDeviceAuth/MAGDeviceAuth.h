@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <AVFoundation/AVFoundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MAGDeviceAuth : NSObject
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)hasMicroPhoneAuth;//判断是否有麦克风权限
 
-+ (BOOL)hasCameraAuth;//判断是否有相机权限
++ (AVAuthorizationStatus)currentAuth;//判断是否有相机权限
 
 @end
 

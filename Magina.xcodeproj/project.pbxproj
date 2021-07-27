@@ -169,7 +169,8 @@
 		2B1D52AB25C2B64B005CDF83 /* MAGFeed */ = {
 			isa = PBXGroup;
 			children = (
-				2B2C1FCE267F4ABD00BE43C9 /* MAGAlbumList */,
+				2B3693FC26AFE1A50017F521 /* MAGScrollBanner */,
+				2B2C1FCE267F4ABD00BE43C9 /* MAGAlbum */,
 				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
 				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
 				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
@@ -231,11 +232,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2B2C1FCE267F4ABD00BE43C9 /* MAGAlbumList */ = {
+		2B2C1FCE267F4ABD00BE43C9 /* MAGAlbum */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = MAGAlbumList;
+			path = MAGAlbum;
+			sourceTree = "<group>";
+		};
+		2B3693FC26AFE1A50017F521 /* MAGScrollBanner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MAGScrollBanner;
 			sourceTree = "<group>";
 		};
 		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {
