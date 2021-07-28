@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)requestPhotoLibraryPermission:(void(^)(BOOL success))completion;//请求相册权限
 
-+ (BOOL)hasMicroPhoneAuth;//判断是否有麦克风权限
-
 + (AVAuthorizationStatus)currentAuth;//判断是否有相机权限
 
 @end

@@ -25,15 +25,15 @@
     [super viewDidLoad];
     UINavigationController *feedNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGFeedViewController alloc] init]];
     UINavigationController *rankNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGRankViewController alloc] init]];
-    UINavigationController *testNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGTestViewController alloc] init]];
+    UINavigationController *UINavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGTestViewController alloc] init]];
     UINavigationController *userNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGUserViewController alloc] init]];
     
-    NSArray *VCArray = [NSArray arrayWithObjects:feedNavVC, rankNavVC, testNavVC, userNavVC, nil];
+    NSArray *VCArray = [NSArray arrayWithObjects:feedNavVC, rankNavVC, UINavVC, userNavVC, nil];
     self.viewControllers = VCArray;
     
     feedNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:nil selectedImage:nil];
     rankNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"排行" image:nil selectedImage:nil];
-    testNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"测试" image:nil selectedImage:nil];
+    UINavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"UI" image:nil selectedImage:nil];
     userNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"个人" image:nil selectedImage:nil];
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{

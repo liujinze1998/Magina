@@ -13,6 +13,7 @@
 
 #import "MAGFeedViewController.h"
 #import "MAGScanViewController.h"
+#import "HorizontalCollectionViewController.h"
 #import "MAGDeviceAuth.h"
 #import "MAGUIConfigCenter.h"
 #import "UIDevice+MAGAdapt.h"
@@ -24,7 +25,7 @@
 @property (nonatomic, strong) UIButton *scanButton;//打开扫一扫
 @property (nonatomic, strong) UIButton *albumButton;//打开IGList相册
 @property (nonatomic, strong) UIButton *transGifButton;//视频转gif
-@property (nonatomic, strong) UIButton *scrollBannerButton;//待定
+@property (nonatomic, strong) UIButton *scrollBannerButton;//横向滑动的collectionView
 @property (nonatomic, strong) UIButton *noname2Button;//待定
 
 @end
@@ -117,7 +118,9 @@
 }
 
 -(void)scrollBannerButtonClicked{
-    
+    HorizontalCollectionViewController *horizontalVC = [[HorizontalCollectionViewController alloc] init];
+    horizontalVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:horizontalVC animated:YES completion:nil];
 }
 
 - (void)scanButtonClicked
