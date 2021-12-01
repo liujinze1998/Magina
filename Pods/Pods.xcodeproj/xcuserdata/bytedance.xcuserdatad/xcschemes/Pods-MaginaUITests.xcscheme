@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D047FF47F81935DA2215D1E807735002"
+               BlueprintIdentifier = "B97A218FCDF8EEAA4E26C66194057E88"
                BuildableName = "libPods-MaginaUITests.a"
                BlueprintName = "Pods-MaginaUITests"
                ReferencedContainer = "container:Pods.xcodeproj">

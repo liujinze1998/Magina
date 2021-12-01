@@ -141,7 +141,7 @@
 {
     if (!_enterAlbumButton) {
         _enterAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_enterAlbumButton setTitle:@"相册" forState:UIControlStateNormal];
+        [_enterAlbumButton setTitle:@"相册(未开发)" forState:UIControlStateNormal];
         _enterAlbumButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
         [_enterAlbumButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_enterAlbumButton addTarget:self action:@selector(enterAlbumButtonClick) forControlEvents:UIControlEventTouchUpInside];

@@ -9,7 +9,7 @@ DEPENDENCIES:
   - XLForm (= 4.2.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - KVOController
     - Masonry
     - XLForm
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a68225e6a35fee7e33df3fabddab8cb22b0d96ab
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.10.1

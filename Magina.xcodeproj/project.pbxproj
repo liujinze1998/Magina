@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A2C25CC243E005CDF83 /* MAGScanView.m */; };
 		2B1D8A4325CC2482005CDF83 /* MAGCameraScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */; };
 		2B3693FF26AFE7780017F521 /* HorizontalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3693FE26AFE7780017F521 /* HorizontalCollectionViewController.m */; };
-		2B36940226AFEA5C0017F521 /* HorizontalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36940126AFEA5C0017F521 /* HorizontalCollectionViewCell.m */; };
 		2B36940826B02FE40017F521 /* MAGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36940626B02FE40017F521 /* MAGAlertView.m */; };
 		2B36940926B02FE40017F521 /* MAGTextEditAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36940726B02FE40017F521 /* MAGTextEditAlertView.m */; };
 		2B36940C26B0342E0017F521 /* MAGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36940B26B0342E0017F521 /* MAGToast.m */; };
@@ -43,6 +42,9 @@
 		2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FDE254705290047AE86 /* MAGUserViewController.m */; };
 		2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FE4254705800047AE86 /* MAGRankViewController.m */; };
 		2BB65FEB2547058B0047AE86 /* MAGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */; };
+		2BBDE31A275621DB00513B2E /* AdaptiveContentContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDE319275621DB00513B2E /* AdaptiveContentContainerView.m */; };
+		2BBDE31D27562E1B00513B2E /* FirstCellZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDE31C27562E1B00513B2E /* FirstCellZoomInLayout.m */; };
+		2BBDE3202756302800513B2E /* FirstCellZoomInContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDE31F2756302800513B2E /* FirstCellZoomInContainerView.m */; };
 		2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */; };
 		2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */; };
 		2BD66BD625E3B4DD0091D4C0 /* MAGUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BD525E3B4DD0091D4C0 /* MAGUserInfoViewController.swift */; };
@@ -79,8 +81,6 @@
 		2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGCameraScanManager.m; sourceTree = "<group>"; };
 		2B3693FD26AFE7780017F521 /* HorizontalCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewController.h; sourceTree = "<group>"; };
 		2B3693FE26AFE7780017F521 /* HorizontalCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewController.m; sourceTree = "<group>"; };
-		2B36940026AFEA5C0017F521 /* HorizontalCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewCell.h; sourceTree = "<group>"; };
-		2B36940126AFEA5C0017F521 /* HorizontalCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewCell.m; sourceTree = "<group>"; };
 		2B36940426B02FE40017F521 /* MAGTextEditAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGTextEditAlertView.h; sourceTree = "<group>"; };
 		2B36940526B02FE40017F521 /* MAGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGAlertView.h; sourceTree = "<group>"; };
 		2B36940626B02FE40017F521 /* MAGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGAlertView.m; sourceTree = "<group>"; };
@@ -141,6 +141,12 @@
 		2BB65FE4254705800047AE86 /* MAGRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGRankViewController.m; sourceTree = "<group>"; };
 		2BB65FE92547058B0047AE86 /* MAGTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGTestViewController.h; sourceTree = "<group>"; };
 		2BB65FEA2547058B0047AE86 /* MAGTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGTestViewController.m; sourceTree = "<group>"; };
+		2BBDE318275621DB00513B2E /* AdaptiveContentContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdaptiveContentContainerView.h; sourceTree = "<group>"; };
+		2BBDE319275621DB00513B2E /* AdaptiveContentContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdaptiveContentContainerView.m; sourceTree = "<group>"; };
+		2BBDE31B27562E1B00513B2E /* FirstCellZoomInLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInLayout.h; sourceTree = "<group>"; };
+		2BBDE31C27562E1B00513B2E /* FirstCellZoomInLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCellZoomInLayout.m; sourceTree = "<group>"; };
+		2BBDE31E2756302800513B2E /* FirstCellZoomInContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInContainerView.h; sourceTree = "<group>"; };
+		2BBDE31F2756302800513B2E /* FirstCellZoomInContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCellZoomInContainerView.m; sourceTree = "<group>"; };
 		2BD66B9725E38CE30091D4C0 /* MAGCaptureAlbumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGCaptureAlbumManager.h; sourceTree = "<group>"; };
 		2BD66B9825E38CE30091D4C0 /* MAGCaptureAlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGCaptureAlbumManager.m; sourceTree = "<group>"; };
 		2BD66BB625E393980091D4C0 /* MAGDeviceAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGDeviceAuth.h; sourceTree = "<group>"; };
@@ -265,8 +271,12 @@
 			children = (
 				2B3693FD26AFE7780017F521 /* HorizontalCollectionViewController.h */,
 				2B3693FE26AFE7780017F521 /* HorizontalCollectionViewController.m */,
-				2B36940026AFEA5C0017F521 /* HorizontalCollectionViewCell.h */,
-				2B36940126AFEA5C0017F521 /* HorizontalCollectionViewCell.m */,
+				2BBDE318275621DB00513B2E /* AdaptiveContentContainerView.h */,
+				2BBDE319275621DB00513B2E /* AdaptiveContentContainerView.m */,
+				2BBDE31B27562E1B00513B2E /* FirstCellZoomInLayout.h */,
+				2BBDE31C27562E1B00513B2E /* FirstCellZoomInLayout.m */,
+				2BBDE31E2756302800513B2E /* FirstCellZoomInContainerView.h */,
+				2BBDE31F2756302800513B2E /* FirstCellZoomInContainerView.m */,
 			);
 			path = MAGScrollBanner;
 			sourceTree = "<group>";
@@ -703,16 +713,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Magina/Pods-Magina-resources.sh",
-				"${PODS_ROOT}/XLForm/XLForm/XLForm.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Magina/Pods-Magina-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XLForm.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Magina/Pods-Magina-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -777,6 +782,7 @@
 				2B785F4025E7F1DC00A4800F /* MAGUserHeaderView.m in Sources */,
 				2B36940C26B0342E0017F521 /* MAGToast.m in Sources */,
 				2B786D4525EDE8D100A4800F /* MAGSettingsViewController.m in Sources */,
+				2BBDE3202756302800513B2E /* FirstCellZoomInContainerView.m in Sources */,
 				2BB65FE5254705800047AE86 /* MAGRankViewController.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2B36941026B036140017F521 /* MAGEmptyCheck.m in Sources */,
@@ -786,12 +792,13 @@
 				2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */,
 				2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */,
 				2BD66F6625E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift in Sources */,
-				2B36940226AFEA5C0017F521 /* HorizontalCollectionViewCell.m in Sources */,
 				2B90EF14256D276F002A2B20 /* TableViewCell.m in Sources */,
 				2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */,
 				2B3693FF26AFE7780017F521 /* HorizontalCollectionViewController.m in Sources */,
+				2BBDE31A275621DB00513B2E /* AdaptiveContentContainerView.m in Sources */,
 				2B36941326B038700017F521 /* MAGLoading.m in Sources */,
 				2B36940926B02FE40017F521 /* MAGTextEditAlertView.m in Sources */,
+				2BBDE31D27562E1B00513B2E /* FirstCellZoomInLayout.m in Sources */,
 				2B90EF15256D276F002A2B20 /* DataArray.m in Sources */,
 				2B90EF13256D276F002A2B20 /* MyTableViewContrllor.m in Sources */,
 				2B90EF12256D276F002A2B20 /* MyHeaderView.m in Sources */,
