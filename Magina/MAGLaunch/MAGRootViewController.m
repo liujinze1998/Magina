@@ -7,8 +7,8 @@
 
 #import "MAGRootViewController.h"
 #import "MAGFeedViewController.h"
-#import "MAGRankViewController.h"
-#import "MAGTestViewController.h"
+#import "MAGFunctionViewController.h"
+#import "MAGUIBizViewController.h"
 #import "MAGUserViewController.h"
 #import "MAGLaunchView.h"
 
@@ -24,15 +24,15 @@
 {
     [super viewDidLoad];
     UINavigationController *feedNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGFeedViewController alloc] init]];
-    UINavigationController *rankNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGRankViewController alloc] init]];
-    UINavigationController *UINavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGTestViewController alloc] init]];
+    UINavigationController *funcNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGFunctionViewController alloc] init]];
+    UINavigationController *UINavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGUIBizViewController alloc] init]];
     UINavigationController *userNavVC = [[UINavigationController alloc] initWithRootViewController:[[MAGUserViewController alloc] init]];
     
-    NSArray *VCArray = [NSArray arrayWithObjects:feedNavVC, rankNavVC, UINavVC, userNavVC, nil];
+    NSArray *VCArray = [NSArray arrayWithObjects:feedNavVC, funcNavVC, UINavVC, userNavVC, nil];
     self.viewControllers = VCArray;
     
     feedNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:nil selectedImage:nil];
-    rankNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"排行" image:nil selectedImage:nil];
+    funcNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"功能" image:nil selectedImage:nil];
     UINavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"UI" image:nil selectedImage:nil];
     userNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"个人" image:nil selectedImage:nil];
     

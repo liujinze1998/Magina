@@ -1,5 +1,5 @@
 //
-//  MAGTestViewController.h
+//  MAGUIBizViewController.h
 //  Magina
 //
 //  Created by liujinze on 2020/10/26.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MAGTestViewController : UIViewController
+@interface MAGUIBizViewController : UIViewController
 
 @end
 
