@@ -8,9 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2B0EE3E928C741ED0005F20E /* MAGFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EE3E828C741ED0005F20E /* MAGFunctionViewController.m */; };
+		2B11D82128E6DF0300BFD7A2 /* MAGBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B11D82028E6DF0300BFD7A2 /* MAGBubble.m */; };
 		2B1D8A2525CC2330005CDF83 /* MAGScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A2425CC2330005CDF83 /* MAGScanViewController.m */; };
 		2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A2C25CC243E005CDF83 /* MAGScanView.m */; };
 		2B1D8A4325CC2482005CDF83 /* MAGCameraScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */; };
+		2B2E72132ADEC09200BEFE57 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71D52ADEC09100BEFE57 /* AlbumCell.swift */; };
+		2B2E72142ADEC09200BEFE57 /* AlbumMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71D62ADEC09100BEFE57 /* AlbumMediaCell.swift */; };
+		2B2E72152ADEC09200BEFE57 /* AlbumSlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71D72ADEC09100BEFE57 /* AlbumSlidingTabView.swift */; };
+		2B2E72162ADEC09200BEFE57 /* AlbumNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71D82ADEC09100BEFE57 /* AlbumNavigationView.swift */; };
+		2B2E72232ADEC09200BEFE57 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71EE2ADEC09200BEFE57 /* DataContainer.swift */; };
+		2B2E72242ADEC09200BEFE57 /* CategorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71EF2ADEC09200BEFE57 /* CategorySource.swift */; };
+		2B2E72262ADEC09200BEFE57 /* LibraryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71F12ADEC09200BEFE57 /* LibraryObserver.swift */; };
+		2B2E72282ADEC09200BEFE57 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71F42ADEC09200BEFE57 /* RequestManager.swift */; };
+		2B2E722D2ADEC09200BEFE57 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E71FB2ADEC09200BEFE57 /* AlbumModel.swift */; };
+		2B2E723B2ADEC09200BEFE57 /* AlbumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E720D2ADEC09200BEFE57 /* AlbumMainViewController.swift */; };
+		2B2E723D2ADEC09200BEFE57 /* AlbumSlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E720F2ADEC09200BEFE57 /* AlbumSlidingViewController.swift */; };
+		2B2E723E2ADEC09200BEFE57 /* AlbumCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E72102ADEC09200BEFE57 /* AlbumCategoryViewController.swift */; };
+		2B2E723F2ADEC09200BEFE57 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E72122ADEC09200BEFE57 /* AlbumViewModel.swift */; };
 		2B3693FF26AFE7780017F521 /* HorizontalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3693FE26AFE7780017F521 /* HorizontalCollectionViewController.m */; };
 		2B36940826B02FE40017F521 /* MAGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36940626B02FE40017F521 /* MAGAlertView.m */; };
 		2B36940926B02FE40017F521 /* MAGTextEditAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36940726B02FE40017F521 /* MAGTextEditAlertView.m */; };
@@ -26,6 +40,11 @@
 		2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5817257C8A610015F29B /* UIDevice+MAGAdapt.m */; };
 		2B8B582A257CA0750015F29B /* MAGUIConfigCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */; };
 		2B90EF24256D2778002A2B20 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B90EF1B256D2778002A2B20 /* People.m */; };
+		2BA126A928F3C0E4002DE689 /* MAGHalfScreenContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA126A828F3C0E4002DE689 /* MAGHalfScreenContainerViewController.m */; };
+		2BA126AC28F3C106002DE689 /* MAGHalfScreenBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA126AB28F3C106002DE689 /* MAGHalfScreenBaseViewController.m */; };
+		2BA126AF28F3CF6A002DE689 /* MAGResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA126AE28F3CF6A002DE689 /* MAGResponder.m */; };
+		2BA126B228F3D016002DE689 /* MAGHalfScreenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA126B128F3D016002DE689 /* MAGHalfScreenTableViewCell.m */; };
+		2BA126B528F3D2A6002DE689 /* MAGHalfScreenCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA126B428F3D2A6002DE689 /* MAGHalfScreenCellData.m */; };
 		2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB65C7C2546F9110047AE86 /* AppDelegate.m */; };
 		2BB65C862546F9110047AE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C842546F9110047AE86 /* Main.storyboard */; };
 		2BB65C882546F9120047AE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB65C872546F9120047AE86 /* Assets.xcassets */; };
@@ -44,6 +63,7 @@
 		2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BB725E393980091D4C0 /* MAGDeviceAuth.m */; };
 		2BD66BD625E3B4DD0091D4C0 /* MAGUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66BD525E3B4DD0091D4C0 /* MAGUserInfoViewController.swift */; };
 		2BD66F6625E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD66F6525E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift */; };
+		2BF54BAD2AEA9001002FC7C9 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF54BAC2AEA9001002FC7C9 /* CategoryModel.swift */; };
 		32C423BC833BCDD0E77509F3 /* libPods-MaginaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C513891F7F289B972747673B /* libPods-MaginaTests.a */; };
 		7A9EBB2209B0C239E3341EDB /* libPods-MaginaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B66E469DC2CC50CACA72F /* libPods-MaginaUITests.a */; };
 		CFCAF0CA6A17DCDBC95BD970 /* libPods-Magina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 826770D7D84090700B5586F3 /* libPods-Magina.a */; };
@@ -70,12 +90,27 @@
 		15C0FA8032A6B08DADE84528 /* Pods-Magina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.debug.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.debug.xcconfig"; sourceTree = "<group>"; };
 		2B0EE3E728C741ED0005F20E /* MAGFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGFunctionViewController.h; sourceTree = "<group>"; };
 		2B0EE3E828C741ED0005F20E /* MAGFunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGFunctionViewController.m; sourceTree = "<group>"; };
+		2B11D81F28E6DF0300BFD7A2 /* MAGBubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGBubble.h; sourceTree = "<group>"; };
+		2B11D82028E6DF0300BFD7A2 /* MAGBubble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGBubble.m; sourceTree = "<group>"; };
 		2B1D8A2325CC2330005CDF83 /* MAGScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGScanViewController.h; sourceTree = "<group>"; };
 		2B1D8A2425CC2330005CDF83 /* MAGScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGScanViewController.m; sourceTree = "<group>"; };
 		2B1D8A2B25CC243E005CDF83 /* MAGScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGScanView.h; sourceTree = "<group>"; };
 		2B1D8A2C25CC243E005CDF83 /* MAGScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGScanView.m; sourceTree = "<group>"; };
 		2B1D8A4125CC2482005CDF83 /* MAGCameraScanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGCameraScanManager.h; sourceTree = "<group>"; };
 		2B1D8A4225CC2482005CDF83 /* MAGCameraScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGCameraScanManager.m; sourceTree = "<group>"; };
+		2B2E71D52ADEC09100BEFE57 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		2B2E71D62ADEC09100BEFE57 /* AlbumMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumMediaCell.swift; sourceTree = "<group>"; };
+		2B2E71D72ADEC09100BEFE57 /* AlbumSlidingTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumSlidingTabView.swift; sourceTree = "<group>"; };
+		2B2E71D82ADEC09100BEFE57 /* AlbumNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumNavigationView.swift; sourceTree = "<group>"; };
+		2B2E71EE2ADEC09200BEFE57 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		2B2E71EF2ADEC09200BEFE57 /* CategorySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySource.swift; sourceTree = "<group>"; };
+		2B2E71F12ADEC09200BEFE57 /* LibraryObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryObserver.swift; sourceTree = "<group>"; };
+		2B2E71F42ADEC09200BEFE57 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		2B2E71FB2ADEC09200BEFE57 /* AlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		2B2E720D2ADEC09200BEFE57 /* AlbumMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumMainViewController.swift; sourceTree = "<group>"; };
+		2B2E720F2ADEC09200BEFE57 /* AlbumSlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumSlidingViewController.swift; sourceTree = "<group>"; };
+		2B2E72102ADEC09200BEFE57 /* AlbumCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCategoryViewController.swift; sourceTree = "<group>"; };
+		2B2E72122ADEC09200BEFE57 /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		2B3693FD26AFE7780017F521 /* HorizontalCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewController.h; sourceTree = "<group>"; };
 		2B3693FE26AFE7780017F521 /* HorizontalCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewController.m; sourceTree = "<group>"; };
 		2B36940426B02FE40017F521 /* MAGTextEditAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGTextEditAlertView.h; sourceTree = "<group>"; };
@@ -104,6 +139,16 @@
 		2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGUIConfigCenter.m; sourceTree = "<group>"; };
 		2B90EF1B256D2778002A2B20 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 		2B90EF21256D2778002A2B20 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		2BA126A728F3C0E4002DE689 /* MAGHalfScreenContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGHalfScreenContainerViewController.h; sourceTree = "<group>"; };
+		2BA126A828F3C0E4002DE689 /* MAGHalfScreenContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGHalfScreenContainerViewController.m; sourceTree = "<group>"; };
+		2BA126AA28F3C106002DE689 /* MAGHalfScreenBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGHalfScreenBaseViewController.h; sourceTree = "<group>"; };
+		2BA126AB28F3C106002DE689 /* MAGHalfScreenBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGHalfScreenBaseViewController.m; sourceTree = "<group>"; };
+		2BA126AD28F3CF6A002DE689 /* MAGResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGResponder.h; sourceTree = "<group>"; };
+		2BA126AE28F3CF6A002DE689 /* MAGResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGResponder.m; sourceTree = "<group>"; };
+		2BA126B028F3D016002DE689 /* MAGHalfScreenTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGHalfScreenTableViewCell.h; sourceTree = "<group>"; };
+		2BA126B128F3D016002DE689 /* MAGHalfScreenTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGHalfScreenTableViewCell.m; sourceTree = "<group>"; };
+		2BA126B328F3D2A6002DE689 /* MAGHalfScreenCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGHalfScreenCellData.h; sourceTree = "<group>"; };
+		2BA126B428F3D2A6002DE689 /* MAGHalfScreenCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGHalfScreenCellData.m; sourceTree = "<group>"; };
 		2BB65C782546F9110047AE86 /* Magina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB65C7B2546F9110047AE86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BB65C7C2546F9110047AE86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +185,7 @@
 		2BD66BD525E3B4DD0091D4C0 /* MAGUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGUserInfoViewController.swift; sourceTree = "<group>"; };
 		2BD66BE925E3BD3A0091D4C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2BD66F6525E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGUserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		2BF54BAC2AEA9001002FC7C9 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		310FDF1539F915175A329D81 /* Pods-Magina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magina.release.xcconfig"; path = "Target Support Files/Pods-Magina/Pods-Magina.release.xcconfig"; sourceTree = "<group>"; };
 		76C5C36A71FE26710FF0A87C /* Pods-MaginaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaginaTests.debug.xcconfig"; path = "Target Support Files/Pods-MaginaTests/Pods-MaginaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		826770D7D84090700B5586F3 /* libPods-Magina.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Magina.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,14 +238,15 @@
 			path = MAGFeedImage;
 			sourceTree = "<group>";
 		};
-		2B0EE3E428C1DE820005F20E /* MAGFunctionComponent */ = {
+		2B0EE3E428C1DE820005F20E /* MAGFunctionPage */ = {
 			isa = PBXGroup;
 			children = (
-				2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */,
+				2B2C1FCE267F4ABD00BE43C9 /* Album */,
+				2B1D8A1F25CC1FDC005CDF83 /* ScanQR */,
 				2B0EE3E728C741ED0005F20E /* MAGFunctionViewController.h */,
 				2B0EE3E828C741ED0005F20E /* MAGFunctionViewController.m */,
 			);
-			path = MAGFunctionComponent;
+			path = MAGFunctionPage;
 			sourceTree = "<group>";
 		};
 		2B0EE3E528C1DF750005F20E /* ViewController */ = {
@@ -218,7 +265,16 @@
 			path = MAGFeedList;
 			sourceTree = "<group>";
 		};
-		2B1D52AB25C2B64B005CDF83 /* MAGFeedComponent */ = {
+		2B11D81E28E6DEE800BFD7A2 /* Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				2B11D81F28E6DF0300BFD7A2 /* MAGBubble.h */,
+				2B11D82028E6DF0300BFD7A2 /* MAGBubble.m */,
+			);
+			path = Bubble;
+			sourceTree = "<group>";
+		};
+		2B1D52AB25C2B64B005CDF83 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				2B0EE3EA28C74B590005F20E /* MAGFeedList */,
@@ -227,21 +283,21 @@
 				2BB65FD4254705060047AE86 /* MAGFeedViewController.h */,
 				2BB65FD5254705060047AE86 /* MAGFeedViewController.m */,
 			);
-			path = MAGFeedComponent;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		2B1D52AC25C2B654005CDF83 /* MAGUIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				2B3693FC26AFE1A50017F521 /* MAGScrollBanner */,
-				2B36940326B02E0A0017F521 /* CommonUI */,
+				2BA126A628F3C066002DE689 /* HalfScreen */,
+				2B3693FC26AFE1A50017F521 /* ScrollBanner */,
 				2BB65FE92547058B0047AE86 /* MAGUIBizViewController.h */,
 				2BB65FEA2547058B0047AE86 /* MAGUIBizViewController.m */,
 			);
 			path = MAGUIComponent;
 			sourceTree = "<group>";
 		};
-		2B1D8A1F25CC1FDC005CDF83 /* MAGScanQR */ = {
+		2B1D8A1F25CC1FDC005CDF83 /* ScanQR */ = {
 			isa = PBXGroup;
 			children = (
 				2B1D8A6025CD2545005CDF83 /* ViewModel */,
@@ -249,7 +305,7 @@
 				2B1D8A2A25CC2402005CDF83 /* View */,
 				2B1D8A2925CC2334005CDF83 /* ViewController */,
 			);
-			path = MAGScanQR;
+			path = ScanQR;
 			sourceTree = "<group>";
 		};
 		2B1D8A2925CC2334005CDF83 /* ViewController */ = {
@@ -286,14 +342,89 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2B2C1FCE267F4ABD00BE43C9 /* MAGAlbumComponent */ = {
+		2B2C1FCE267F4ABD00BE43C9 /* Album */ = {
 			isa = PBXGroup;
 			children = (
+				2B2E720C2ADEC09200BEFE57 /* Controller */,
+				2B2E71D92ADEC09200BEFE57 /* Model */,
+				2B2E71D42ADEC09100BEFE57 /* View */,
+				2B2E72112ADEC09200BEFE57 /* ViewModel */,
 			);
-			path = MAGAlbumComponent;
+			path = Album;
 			sourceTree = "<group>";
 		};
-		2B3693FC26AFE1A50017F521 /* MAGScrollBanner */ = {
+		2B2E71D42ADEC09100BEFE57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E71D52ADEC09100BEFE57 /* AlbumCell.swift */,
+				2B2E71D62ADEC09100BEFE57 /* AlbumMediaCell.swift */,
+				2B2E71D72ADEC09100BEFE57 /* AlbumSlidingTabView.swift */,
+				2B2E71D82ADEC09100BEFE57 /* AlbumNavigationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B2E71D92ADEC09200BEFE57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E71EE2ADEC09200BEFE57 /* DataContainer.swift */,
+				2B2E71EF2ADEC09200BEFE57 /* CategorySource.swift */,
+				2BF54BAC2AEA9001002FC7C9 /* CategoryModel.swift */,
+				2B2E71FB2ADEC09200BEFE57 /* AlbumModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B2E720C2ADEC09200BEFE57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E720D2ADEC09200BEFE57 /* AlbumMainViewController.swift */,
+				2B2E720F2ADEC09200BEFE57 /* AlbumSlidingViewController.swift */,
+				2B2E72102ADEC09200BEFE57 /* AlbumCategoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B2E72112ADEC09200BEFE57 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E71F42ADEC09200BEFE57 /* RequestManager.swift */,
+				2B2E71F12ADEC09200BEFE57 /* LibraryObserver.swift */,
+				2B2E72122ADEC09200BEFE57 /* AlbumViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B32C9C82B9B0938000D28AD /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2B36940426B02FE40017F521 /* MAGTextEditAlertView.h */,
+				2B36940726B02FE40017F521 /* MAGTextEditAlertView.m */,
+				2B36940526B02FE40017F521 /* MAGAlertView.h */,
+				2B36940626B02FE40017F521 /* MAGAlertView.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2B32C9C92B9B0945000D28AD /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				2B36940A26B0342E0017F521 /* MAGToast.h */,
+				2B36940B26B0342E0017F521 /* MAGToast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		2B32C9CA2B9B0950000D28AD /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				2B36941126B038700017F521 /* MAGLoading.h */,
+				2B36941226B038700017F521 /* MAGLoading.m */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		2B3693FC26AFE1A50017F521 /* ScrollBanner */ = {
 			isa = PBXGroup;
 			children = (
 				2B3693FD26AFE7780017F521 /* HorizontalCollectionViewController.h */,
@@ -305,20 +436,16 @@
 				2BBDE31E2756302800513B2E /* FirstCellZoomInContainerView.h */,
 				2BBDE31F2756302800513B2E /* FirstCellZoomInContainerView.m */,
 			);
-			path = MAGScrollBanner;
+			path = ScrollBanner;
 			sourceTree = "<group>";
 		};
 		2B36940326B02E0A0017F521 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				2B36940526B02FE40017F521 /* MAGAlertView.h */,
-				2B36940626B02FE40017F521 /* MAGAlertView.m */,
-				2B36940426B02FE40017F521 /* MAGTextEditAlertView.h */,
-				2B36940726B02FE40017F521 /* MAGTextEditAlertView.m */,
-				2B36940A26B0342E0017F521 /* MAGToast.h */,
-				2B36940B26B0342E0017F521 /* MAGToast.m */,
-				2B36941126B038700017F521 /* MAGLoading.h */,
-				2B36941226B038700017F521 /* MAGLoading.m */,
+				2B32C9CA2B9B0950000D28AD /* Loading */,
+				2B32C9C92B9B0945000D28AD /* Toast */,
+				2B32C9C82B9B0938000D28AD /* Alert */,
+				2B11D81E28E6DEE800BFD7A2 /* Bubble */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -332,7 +459,7 @@
 			path = EmptyCheck;
 			sourceTree = "<group>";
 		};
-		2B3A2E4325BEA19100F568E7 /* MAGLaunch */ = {
+		2B3A2E4325BEA19100F568E7 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
 				2B4AD30328912B50000DE6BE /* MaginaLaunch.jpg */,
@@ -344,7 +471,7 @@
 				2BB65C7C2546F9110047AE86 /* AppDelegate.m */,
 				2BB65C892546F9120047AE86 /* LaunchScreen.storyboard */,
 			);
-			path = MAGLaunch;
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		2B3A2E5825BEBEAC00F568E7 /* MAGUIHelper */ = {
@@ -352,11 +479,13 @@
 			children = (
 				2B8B5828257CA0750015F29B /* MAGUIConfigCenter.h */,
 				2B8B5829257CA0750015F29B /* MAGUIConfigCenter.m */,
+				2BA126AD28F3CF6A002DE689 /* MAGResponder.h */,
+				2BA126AE28F3CF6A002DE689 /* MAGResponder.m */,
 			);
 			path = MAGUIHelper;
 			sourceTree = "<group>";
 		};
-		2B3A2E5925BEBEC300F568E7 /* MAGUtils */ = {
+		2B3A2E5925BEBEC300F568E7 /* CommonUtils */ = {
 			isa = PBXGroup;
 			children = (
 				2B36940D26B035DE0017F521 /* EmptyCheck */,
@@ -364,7 +493,7 @@
 				2B8B581C257C8CCF0015F29B /* MAGDeviceHelper */,
 				2B3A2E5825BEBEAC00F568E7 /* MAGUIHelper */,
 			);
-			path = MAGUtils;
+			path = CommonUtils;
 			sourceTree = "<group>";
 		};
 		2B53FEB12577CA3B00C520F6 /* View */ = {
@@ -396,7 +525,7 @@
 			path = MAGDeviceHelper;
 			sourceTree = "<group>";
 		};
-		2B90EF1A256D2778002A2B20 /* MAGUserComponent */ = {
+		2B90EF1A256D2778002A2B20 /* MAGUserPage */ = {
 			isa = PBXGroup;
 			children = (
 				2B53FEB12577CA3B00C520F6 /* View */,
@@ -405,7 +534,22 @@
 				2BD66BCA25E3AC4F0091D4C0 /* EditUserInfo */,
 				2BD6682625E361500091D4C0 /* SystemSetting */,
 			);
-			path = MAGUserComponent;
+			path = MAGUserPage;
+			sourceTree = "<group>";
+		};
+		2BA126A628F3C066002DE689 /* HalfScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2BA126A728F3C0E4002DE689 /* MAGHalfScreenContainerViewController.h */,
+				2BA126A828F3C0E4002DE689 /* MAGHalfScreenContainerViewController.m */,
+				2BA126AA28F3C106002DE689 /* MAGHalfScreenBaseViewController.h */,
+				2BA126AB28F3C106002DE689 /* MAGHalfScreenBaseViewController.m */,
+				2BA126B028F3D016002DE689 /* MAGHalfScreenTableViewCell.h */,
+				2BA126B128F3D016002DE689 /* MAGHalfScreenTableViewCell.m */,
+				2BA126B328F3D2A6002DE689 /* MAGHalfScreenCellData.h */,
+				2BA126B428F3D2A6002DE689 /* MAGHalfScreenCellData.m */,
+			);
+			path = HalfScreen;
 			sourceTree = "<group>";
 		};
 		2BB65C6F2546F9110047AE86 = {
@@ -433,13 +577,13 @@
 		2BB65C7A2546F9110047AE86 /* Magina */ = {
 			isa = PBXGroup;
 			children = (
-				2B2C1FCE267F4ABD00BE43C9 /* MAGAlbumComponent */,
-				2B0EE3E428C1DE820005F20E /* MAGFunctionComponent */,
-				2B90EF1A256D2778002A2B20 /* MAGUserComponent */,
+				2B36940326B02E0A0017F521 /* CommonUI */,
+				2B0EE3E428C1DE820005F20E /* MAGFunctionPage */,
+				2B90EF1A256D2778002A2B20 /* MAGUserPage */,
 				2B1D52AC25C2B654005CDF83 /* MAGUIComponent */,
-				2B1D52AB25C2B64B005CDF83 /* MAGFeedComponent */,
-				2B3A2E4325BEA19100F568E7 /* MAGLaunch */,
-				2B3A2E5925BEBEC300F568E7 /* MAGUtils */,
+				2B1D52AB25C2B64B005CDF83 /* Feed */,
+				2B3A2E4325BEA19100F568E7 /* Launch */,
+				2B3A2E5925BEBEC300F568E7 /* CommonUtils */,
 				2BD66BE825E3BD250091D4C0 /* SwiftConfig */,
 				2BB65C842546F9110047AE86 /* Main.storyboard */,
 				2BB65C872546F9120047AE86 /* Assets.xcassets */,
@@ -773,29 +917,49 @@
 				2B785F4025E7F1DC00A4800F /* MAGUserHeaderView.m in Sources */,
 				2B36940C26B0342E0017F521 /* MAGToast.m in Sources */,
 				2B786D4525EDE8D100A4800F /* MAGSettingsViewController.m in Sources */,
+				2B11D82128E6DF0300BFD7A2 /* MAGBubble.m in Sources */,
+				2BA126AC28F3C106002DE689 /* MAGHalfScreenBaseViewController.m in Sources */,
 				2BBDE3202756302800513B2E /* FirstCellZoomInContainerView.m in Sources */,
+				2BA126B228F3D016002DE689 /* MAGHalfScreenTableViewCell.m in Sources */,
 				2BB65FDF254705290047AE86 /* MAGUserViewController.m in Sources */,
 				2B36941026B036140017F521 /* MAGEmptyCheck.m in Sources */,
+				2B2E72142ADEC09200BEFE57 /* AlbumMediaCell.swift in Sources */,
 				2BB65C7D2546F9110047AE86 /* AppDelegate.m in Sources */,
+				2B2E723B2ADEC09200BEFE57 /* AlbumMainViewController.swift in Sources */,
 				2BD66BB825E393980091D4C0 /* MAGDeviceAuth.m in Sources */,
+				2BF54BAD2AEA9001002FC7C9 /* CategoryModel.swift in Sources */,
+				2BA126A928F3C0E4002DE689 /* MAGHalfScreenContainerViewController.m in Sources */,
+				2B2E72162ADEC09200BEFE57 /* AlbumNavigationView.swift in Sources */,
 				2BD66BD625E3B4DD0091D4C0 /* MAGUserInfoViewController.swift in Sources */,
+				2B2E72132ADEC09200BEFE57 /* AlbumCell.swift in Sources */,
 				2B3A2E4625BEA1FF00F568E7 /* MAGLaunchView.m in Sources */,
 				2BD66B9925E38CE30091D4C0 /* MAGCaptureAlbumManager.m in Sources */,
 				2BD66F6625E3E4C90091D4C0 /* MAGUserInfoTableViewCell.swift in Sources */,
+				2B2E72282ADEC09200BEFE57 /* RequestManager.swift in Sources */,
+				2B2E72262ADEC09200BEFE57 /* LibraryObserver.swift in Sources */,
+				2BA126AF28F3CF6A002DE689 /* MAGResponder.m in Sources */,
 				2B8B5818257C8A610015F29B /* UIDevice+MAGAdapt.m in Sources */,
+				2B2E722D2ADEC09200BEFE57 /* AlbumModel.swift in Sources */,
 				2B3693FF26AFE7780017F521 /* HorizontalCollectionViewController.m in Sources */,
+				2B2E72152ADEC09200BEFE57 /* AlbumSlidingTabView.swift in Sources */,
 				2BBDE31A275621DB00513B2E /* AdaptiveContentContainerView.m in Sources */,
 				2B36941326B038700017F521 /* MAGLoading.m in Sources */,
 				2B36940926B02FE40017F521 /* MAGTextEditAlertView.m in Sources */,
 				2B0EE3E928C741ED0005F20E /* MAGFunctionViewController.m in Sources */,
 				2BBDE31D27562E1B00513B2E /* FirstCellZoomInLayout.m in Sources */,
+				2B2E72242ADEC09200BEFE57 /* CategorySource.swift in Sources */,
 				2B1D8A2D25CC243E005CDF83 /* MAGScanView.m in Sources */,
 				2BB65FEB2547058B0047AE86 /* MAGUIBizViewController.m in Sources */,
+				2B2E723E2ADEC09200BEFE57 /* AlbumCategoryViewController.swift in Sources */,
+				2B2E723F2ADEC09200BEFE57 /* AlbumViewModel.swift in Sources */,
 				2BB65FD6254705060047AE86 /* MAGFeedViewController.m in Sources */,
 				2B78896825EF837300A4800F /* MAGSettingsDefines.h in Sources */,
 				2BB65C8E2546F9120047AE86 /* main.m in Sources */,
+				2BA126B528F3D2A6002DE689 /* MAGHalfScreenCellData.m in Sources */,
+				2B2E72232ADEC09200BEFE57 /* DataContainer.swift in Sources */,
 				2BB65FCA254703C20047AE86 /* MAGRootViewController.m in Sources */,
 				2B36940826B02FE40017F521 /* MAGAlertView.m in Sources */,
+				2B2E723D2ADEC09200BEFE57 /* AlbumSlidingViewController.swift in Sources */,
 				2B7869C325ECC68B00A4800F /* MAGUserDefaultsUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

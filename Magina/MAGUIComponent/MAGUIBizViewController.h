@@ -2,7 +2,7 @@
 //  MAGUIBizViewController.h
 //  Magina
 //
-//  Created by liujinze on 2020/10/26.
+//  Created by AM on 2020/10/26.
 //
 
 #import <UIKit/UIKit.h>

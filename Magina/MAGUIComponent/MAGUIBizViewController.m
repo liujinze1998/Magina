@@ -2,7 +2,7 @@
 //  MAGUIBizViewController.m
 //  Magina
 //
-//  Created by liujinze on 2020/10/26.
+//  Created by AM on 2020/10/26.
 //
 
 #import "MAGUIBizViewController.h"
@@ -12,6 +12,8 @@
 #import <Masonry/Masonry.h>
 //横滑collection
 #import "HorizontalCollectionViewController.h"
+#import "MAGHalfScreenContainerViewController.h"
+#import "MAGResponder.h"
 
 @interface MAGUIBizViewController ()
 
@@ -81,7 +83,33 @@
 }
 
 - (void)halfScreenButtonClicked{
-    
+    MAGHalfScreenVCInputData *inputData = [[MAGHalfScreenVCInputData alloc] init];
+    inputData.itemsArray = [self createHalfScreenData];
+    __weak typeof(self) weakSelf = self;
+    MAGHalfScreenContainerViewController *privacyController = [[MAGHalfScreenContainerViewController alloc] initWithInputData:inputData];
+    privacyController.selectBlock = ^(NSInteger number) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        NSLog(@"选择了第 %d",number);
+    };
+    [privacyController presentOnViewController:[MAGResponder topViewController]];
+}
+
+- (NSArray<MAGHalfScreenCellData *> *)createHalfScreenData
+{
+    MAGHalfScreenCellData *item1 = [[MAGHalfScreenCellData alloc] init];
+    item1.number = 1;
+    item1.title = @"第一个cell";
+    item1.subTitle = @"第一个cell的副标题";
+    MAGHalfScreenCellData *item2 = [[MAGHalfScreenCellData alloc] init];
+    item2.number = 2;
+    item2.title = @"第二个cell";
+    item2.subTitle = @"第二个cell的副标题";
+    MAGHalfScreenCellData *item3 = [[MAGHalfScreenCellData alloc] init];
+    item3.number = 3;
+    item3.title = @"第三个cell";
+    item3.subTitle = nil;
+    NSArray<MAGHalfScreenCellData *> *result = @[item1, item2, item3];
+    return result;
 }
 
 - (void)alertButtonClicked{
@@ -114,9 +142,9 @@
 {
     if (!_halfScreenButton) {
         _halfScreenButton = [[UIButton alloc] initWithFrame:CGRectZero];
-        _halfScreenButton.backgroundColor = [UIColor grayColor];
+        _halfScreenButton.backgroundColor = [UIColor greenColor];
         _halfScreenButton.titleLabel.numberOfLines = 2;
-        [_halfScreenButton setTitle:@"半屏面板(未开发)" forState:UIControlStateNormal];
+        [_halfScreenButton setTitle:@"半屏面板" forState:UIControlStateNormal];
         [_halfScreenButton addTarget:self action:@selector(halfScreenButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     }
     return _halfScreenButton;

@@ -2,7 +2,7 @@
 //  MaginaUITests.m
 //  MaginaUITests
 //
-//  Created by liujinze on 2020/10/26.
+//  Created by AM on 2020/10/26.
 //
 
 #import <XCTest/XCTest.h>
