@@ -1,0 +1,14 @@
+# CocoaPods
+Pods/
+
+# Xcode
+*.xcworkspace
+xcuserdata/
+*.xcuserdatad
+*.xcscmblueprint
+*.xcscheme
+DerivedData/
+
+# Other files and folders
+.DS_Store
+*.swp
